@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepVRse – Explore, Craft & Survive the Depths</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Water ripple background animation */
+    body {
+      background: radial-gradient(circle at 50% 20%, #004d61, #002f3b 70%);
+      animation: waterShift 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes waterShift {
+      0% { background-position: 50% 20%; filter: hue-rotate(0deg); }
+      50% { background-position: 55% 25%; filter: hue-rotate(10deg); }
+      100% { background-position: 45% 15%; filter: hue-rotate(-10deg); }
+    }
+
+    /* Ripple overlay effect */
+    .ripple {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: url('assets/ripple.png') repeat;
+        background-size: 300px 300px; /* adjust based on how dense you want the ripples */
+        mix-blend-mode: overlay;      /* keeps it subtle */
+        opacity: 0.08;                /* lower for subtle effect */
+        animation: rippleMove 12s linear infinite;
+        z-index: 0;
+      }
+
+      @keyframes rippleMove {
+        0%   { background-position: 0 0; }
+        50%  { background-position: 50px 50px; }
+        100% { background-position: 0 0; }
+      }
+
+  </style>
+</head>
+<body class="text-white font-sans relative overflow-x-hidden">
+
+  <!-- Water ripple overlay -->
+  <div class="ripple"></div>
+
+  <!-- Hero section -->
+  <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 z-10">
+    <h1 class="text-6xl md:text-7xl font-extrabold mb-4 text-cyan-300 drop-shadow-lg">
+      DeepVRse
+    </h1>
+    <p class="text-lg md:text-xl max-w-2xl mb-8 text-cyan-100">
+      Dive into a mysterious underwater world. Explore, craft, and survive—whether in standard mode or with Google Cardboard VR.
+    </p>
+    <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.BelowTheBlue" target="_blank"
+       class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg text-lg transition">
+      🌊 Get it on Google Play
+    </a>
+  </section>
+
+  <!-- Features section -->
+  <section class="bg-[#01343f]/80 backdrop-blur-md py-16 px-6 z-10 relative">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-2 text-cyan-300">Explore the Depths</h2>
+        <p class="text-cyan-100">Swim through vast underwater landscapes, discover hidden ruins, ancient creatures, and unlock the ocean’s secrets.</p>
+      </div>
+      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-2 text-cyan-300">Craft & Survive</h2>
+        <p class="text-cyan-100">Collect resources, build tools & survival gear, and manage your resources wisely to survive the perils of the deep.</p>
+      </div>
+      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-2 text-cyan-300">VR Immersion</h2>
+        <p class="text-cyan-100">Switch into Google Cardboard mode anytime for a fully immersive underwater experience.</p>
+      </div>
+      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-2 text-cyan-300">New Challenges</h2>
+        <p class="text-cyan-100">Face endless waves of drones and evolving threats as you push deeper into unknown waters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot gallery -->
+  <section class="py-16 px-6 z-10 relative">
+    <div class="max-w-5xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-semibold text-cyan-300 drop-shadow-lg">In-Game Moments</h2>
+    </div>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Replace src with actual screenshots -->
+      <img src="screenshot1.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+      <img src="screenshot2.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+      <img src="screenshot3.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+      <img src="screenshot4.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+      <img src="screenshot5.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+      <img src="screenshot6.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#01343f]/80 backdrop-blur-md py-10 text-center z-10 relative">
+    <p class="text-cyan-100 mb-2">Made by Mirage Reality Labs</p>
+    <p>Questions or feedback? <a href="mailto:miragegames25@gmail.com" class="underline text-cyan-300">miragegames25@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
