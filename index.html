@@ -3,108 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeepVRse – Explore, Craft & Survive the Depths</title>
+  <title>Mirage Reality Labs – Games, Assets & Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Water ripple background animation */
-    body {
-      background: radial-gradient(circle at 50% 20%, #004d61, #002f3b 70%);
-      animation: waterShift 12s ease-in-out infinite alternate;
-    }
-
-    @keyframes waterShift {
-      0% { background-position: 50% 20%; filter: hue-rotate(0deg); }
-      50% { background-position: 55% 25%; filter: hue-rotate(10deg); }
-      100% { background-position: 45% 15%; filter: hue-rotate(-10deg); }
-    }
-
-    
-    /* Ripple overlay effect */
-    .ripple {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: url('assets/ripple.png') repeat;
-        background-size: 300px 300px; /* adjust based on how dense you want the ripples */
-        mix-blend-mode: overlay;      /* keeps it subtle */
-        opacity: 0.08;                /* lower for subtle effect */
-        animation: rippleMove 12s linear infinite;
-        z-index: 0;
-      }
-
-      @keyframes rippleMove {
-        0%   { background-position: 0 0; }
-        50%  { background-position: 50px 50px; }
-        100% { background-position: 0 0; }
-      }
-
+    body { background: #0a0f1a; }
   </style>
 </head>
-<body class="text-white font-sans relative overflow-x-hidden">
+<body class="text-white font-sans overflow-x-hidden">
 
-  <!-- Water ripple overlay -->
-  <div class="ripple"></div>
+  <!-- NAVBAR -->
+  <nav class="w-full fixed top-0 z-20 bg-[#0d1526]/80 backdrop-blur-md shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center gap-3">
+	    <img src="assets/logo.png" class="h-10 w-auto" />
+	    <span class="text-2xl font-bold text-cyan-300">Mirage Reality Labs</span>
+	  </div>
+	  <div class="space-x-6 text-cyan-100 hidden md:block">
+        <a href="#games" class="hover:text-cyan-300">Games</a>
+        <a href="#assets" class="hover:text-cyan-300">Assets</a>
+        <a href="#services" class="hover:text-cyan-300">Services</a>
+        <a href="#about" class="hover:text-cyan-300">About</a>
+        <a href="#contact" class="hover:text-cyan-300">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Hero section -->
-  <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 z-10">
-    <h1 class="text-6xl md:text-7xl font-extrabold mb-4 text-cyan-300 drop-shadow-lg">
-      DeepVRse
+  <!-- HERO WITH YOUTUBE BACKGROUND -->
+<div class="relative w-full min-h-screen overflow-hidden">
+
+  <!-- YouTube Background Video -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+    <iframe 
+      class="w-full h-full object-cover"
+      src="https://www.youtube.com/embed/R4cbfipxBHs?autoplay=1&mute=1&controls=0&loop=1&playlist=R4cbfipxBHs&modestbranding=1&showinfo=0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+    ></iframe>
+  </div>
+
+  <!-- Dark overlay for readability -->
+  <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+  <!-- HERO CONTENT -->
+  <section class="relative z-20 min-h-screen flex flex-col justify-end items-center text-center px-6 pb-24">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-cyan-300 drop-shadow-lg">
+      Building Immersive Game Experiences
     </h1>
-    <p class="text-lg md:text-xl max-w-2xl mb-8 text-cyan-100">
-      Dive into a mysterious underwater world. Explore, craft, and survive—whether in standard mode or with Google Cardboard VR.
+
+    <p class="max-w-2xl text-lg md:text-xl text-cyan-100">
+      Mirage Reality Labs builds immersive games, stylized assets, and provides
+      full-spectrum game development services.
     </p>
-    <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.BelowTheBlue" target="_blank"
-       class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg text-lg transition">
-      🌊 Get it on Google Play
+
+    <a href="#games"
+       class="mt-8 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg text-lg transition">
+      See Our Projects
     </a>
   </section>
 
-  <!-- Features section -->
-  <section class="bg-[#01343f]/80 backdrop-blur-md py-16 px-6 z-10 relative">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
-        <h2 class="text-2xl font-bold mb-2 text-cyan-300">Explore the Depths</h2>
-        <p class="text-cyan-100">Swim through vast underwater landscapes, discover hidden ruins, ancient creatures, and unlock the ocean’s secrets.</p>
+</div>
+
+  <!-- GAMES -->
+  <section id="games" class="py-20 px-6 bg-[#0f1b2d]">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold text-cyan-300">Games</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <img src="assets/belowTheBlue_cover.jpg" class="rounded-xl mb-4" />
+        <h3 class="text-2xl font-bold text-cyan-300">Below The Blue</h3>
+        <p class="text-cyan-100 mt-2 text-sm">Underwater exploration & survival experience with VR mode.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.BelowTheBlue" target="_blank" class="inline-block mt-4 bg-cyan-500 hover:bg-cyan-600 px-5 py-2 rounded-xl">Google Play</a>
       </div>
-      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
-        <h2 class="text-2xl font-bold mb-2 text-cyan-300">Craft & Survive</h2>
-        <p class="text-cyan-100">Collect resources, build tools & survival gear, and manage your resources wisely to survive the perils of the deep.</p>
-      </div>
-      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
-        <h2 class="text-2xl font-bold mb-2 text-cyan-300">VR Immersion</h2>
-        <p class="text-cyan-100">Switch into Google Cardboard mode anytime for a fully immersive underwater experience.</p>
-      </div>
-      <div class="bg-[#014c59] rounded-2xl shadow-lg p-6">
-        <h2 class="text-2xl font-bold mb-2 text-cyan-300">New Challenges</h2>
-        <p class="text-cyan-100">Face endless waves of drones and evolving threats as you push deeper into unknown waters.</p>
+
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <img src="assets/interstellar_cover.jpg" class="rounded-xl mb-4" />
+        <h3 class="text-2xl font-bold text-cyan-300">Interstellar Journey Simulator</h3>
+        <p class="text-cyan-100 mt-2 text-sm">A relaxing space travel experience. Pre‑alpha available now.</p>
+        <a href="https://mirage-reality-labs.itch.io/interstellar-journey-simulator" target="_blank" class="inline-block mt-4 bg-cyan-500 hover:bg-cyan-600 px-5 py-2 rounded-xl">Try on Itch.io</a>
       </div>
     </div>
   </section>
 
-  <!-- Screenshot gallery -->
-  <section class="py-16 px-6 z-10 relative">
+  <!-- ASSETS -->
+  <section id="assets" class="py-20 px-6 bg-[#0a1220]">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold text-cyan-300">3D Assets</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <div class="rounded-xl mb-4 overflow-hidden" style="position:relative; padding-bottom:56.25%; height:0;">
+		    <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/LUPxyB2m7ko?si=vLTOquA8Ji_LXP6R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+		    	
+		    </iframe>
+		</div>
+
+		<h3 class="text-xl font-bold text-cyan-300">Cartoon Octopus – Rigged</h3>
+        <a href="https://mirage-reality-labs.itch.io/cartoon-octopus-rigged" target="_blank" class="inline-block mt-4 bg-cyan-500 hover:bg-cyan-600 px-5 py-2 rounded-xl">View Asset</a>
+      </div>
+
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+		<div class="rounded-xl mb-4 overflow-hidden relative">
+		<div class="slider w-full h-48 relative overflow-hidden">
+		<div class="slides flex transition-transform duration-500" id="unitySlider">
+		<img src="assets/unity_assets_1.jpg" class="w-full object-cover" />
+		<img src="assets/unity_assets_2.jpg" class="w-full object-cover" />
+		<img src="assets/unity_assets_3.jpg" class="w-full object-cover" />
+		</div>
+		</div>
+		<div class="flex justify-center gap-2 mt-2">
+		<button onclick="slideUnity(0)" class="w-3 h-3 rounded-full bg-cyan-300"></button>
+		<button onclick="slideUnity(1)" class="w-3 h-3 rounded-full bg-cyan-600"></button>
+		<button onclick="slideUnity(2)" class="w-3 h-3 rounded-full bg-cyan-600"></button>
+		</div>
+		</div>
+		<h3 class="text-xl font-bold text-cyan-300">Unity Asset Store Packs</h3>
+		<p class="text-cyan-100 text-sm">Multiple underwater packs pending review.</p>
+      </div>
+	<script>
+		let unityIndex = 0;
+		function slideUnity(i) {
+			unityIndex = i;
+			document.getElementById('unitySlider').style.transform = `translateX(-${i * 100}%)`;
+		}
+	</script>
+    
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <img src="assets/youtube_banner.jpg" class="rounded-xl mb-4" />
+        <h3 class="text-xl font-bold text-cyan-300">Featured Tutorial</h3>
+        <p class="text-cyan-100 text-sm mt-2">Latest video: How to Build a Complete AI Character System</p>
+        <a href="https://www.youtube.com/watch?v=Dk98lgsAO58" target="_blank" class="inline-block mt-4 bg-cyan-500 hover:bg-cyan-600 px-5 py-2 rounded-xl">Watch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20 px-6 bg-[#0f1b2d]">
     <div class="max-w-5xl mx-auto text-center mb-12">
-      <h2 class="text-4xl font-semibold text-cyan-300 drop-shadow-lg">In-Game Moments</h2>
+      <h2 class="text-4xl font-bold text-cyan-300">Services</h2>
+      <p class="text-cyan-100 mt-2">Full-spectrum game development, art, and technical solutions</p>
     </div>
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Replace src with actual screenshots -->
-      <img src="screenshot1.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
-      <img src="screenshot2.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
-      <img src="screenshot3.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
-      <img src="screenshot4.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
-      <img src="screenshot5.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
-      <img src="screenshot6.jpg" alt="DeepVRse screenshot" class="rounded-xl shadow-lg hover:scale-105 transition" />
+
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-bold text-cyan-300 mb-2">Game Development</h3>
+        <p class="text-cyan-100 text-sm">Prototyping, full game builds, mechanics, systems, mobile & PC development.</p>
+      </div>
+
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-bold text-cyan-300 mb-2">3D Art & Asset Creation</h3>
+        <p class="text-cyan-100 text-sm">Characters, creatures, environments, stylized assets & rigging.</p>
+      </div>
+
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-bold text-cyan-300 mb-2">AI Integration</h3>
+        <p class="text-cyan-100 text-sm">AI tools, procedural generation, smart NPC systems.</p>
+      </div>
+
+      <div class="bg-[#112033] p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-bold text-cyan-300 mb-2">Tech Consulting</h3>
+        <p class="text-cyan-100 text-sm">Optimization, pipelines, mobile performance, shader work.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[#01343f]/80 backdrop-blur-md py-10 text-center z-10 relative">
-    <p class="text-cyan-100 mb-2">Made by Mirage Reality Labs</p>
-    <p>Questions or feedback? <a href="mailto:miragegames25@gmail.com" class="underline text-cyan-300">miragegames25@gmail.com</a></p>
-  </footer>
+  <!-- ABOUT -->
+  <section id="about" class="py-20 px-6 bg-[#0a1220]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-cyan-300">About</h2>
+      <p class="text-cyan-100 mt-6 leading-relaxed">Mirage Reality Labs is a game development studio led by a principal developer working closely with a dedicated designer. We build immersive games, high-quality assets, and cutting-edge demonstrations for players and creators worldwide.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 px-6 bg-[#0f1b2d] text-center">
+    <h2 class="text-4xl font-bold text-cyan-300">Contact</h2>
+    <p class="text-cyan-100 mt-4">Business inquiries, collaborations & project requests:</p>
+    <a href="mailto:miragegames25@gmail.com" class="text-cyan-300 underline mt-2 inline-block">miragegames25@gmail.com</a>
+  </section>
+
+  <footer class="py-6 text-center bg-[#0d1526] text-cyan-200 text-sm">© 2025 Mirage Reality Labs — All Rights Reserved</footer>
 
 </body>
 </html>
