@@ -151,13 +151,22 @@
 <!-- HERO (simple autoplay background video) -->
 <div class="relative w-full min-h-screen overflow-hidden" id="home">
 
-  <!-- Background YouTube autoplay video -->
+  <!-- Desktop background video -->
   <iframe 
-    class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+    id="heroVideoDesktop"
+    class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden"
     src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM&modestbranding=1&rel=0&showinfo=0"
     frameborder="0"
     allow="autoplay; encrypted-media"
   ></iframe>
+
+  <!-- Mobile fallback banner -->
+  <img 
+    id="heroMobileBanner"
+    src="assets/hero_thumbnail.jpg"
+    class="absolute inset-0 w-full h-full object-cover z-0 hidden"
+    alt="DeepVRse Background Banner"
+  />
 
   <!-- overlay -->
   <div class="absolute inset-0 bg-black/60 z-10"></div>
@@ -545,19 +554,23 @@ function slideUnity(i) {
   document.getElementById('unitySlider').style.transform =
     `translateX(-${i * 100}%)`;
 }
-document.getElementById("playHeroVideo").addEventListener("click", function () {
-  const container = document.getElementById("heroVideo");
 
-  container.innerHTML = `
-    <iframe 
-      class="w-full h-full object-cover"
-      src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM&modestbranding=1&showinfo=0"
-      frameborder="0"
-      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-    ></iframe>
-  `;
-});
+</script>
+<script>
+  function isIOS() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
 
+  const video = document.getElementById("heroVideoDesktop");
+  const banner = document.getElementById("heroMobileBanner");
+
+  if (isIOS()) {
+    // iOS cannot autoplay YouTube background videos
+    banner.classList.remove("hidden");
+  } else {
+    // Everyone else: video autoplays normally
+    video.classList.remove("hidden");
+  }
 </script>
 
 </body>
