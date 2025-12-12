@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://unpkg.com">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -27,55 +30,59 @@
 
 
   <link rel="canonical" href="https://rahulrkr1996.github.io/" />
-<link rel="preload" href="assets/logo.png" as="image">
+  <link rel="preload" href="assets/logo.png" as="image">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body { background: #081012; }
+    <style>
+      body { background: #081012; }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
 
-    .card {
-      transition: all .3s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(0,255,255,0.15);
-    }
+      .card {
+        transition: all .3s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(0,255,255,0.15);
+      }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px #00f7ff; }
-      50% { box-shadow: 0 0 25px #00f7ff; }
-      100% { box-shadow: 0 0 10px #00f7ff; }
-    }
-  </style>
+      @keyframes pulse {
+        0% { box-shadow: 0 0 10px #00f7ff; }
+        50% { box-shadow: 0 0 25px #00f7ff; }
+        100% { box-shadow: 0 0 10px #00f7ff; }
+      }
+    </style>
 
-  <script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Organization",
-	  "name": "Mirage Reality Labs",
-	  "url": "https://rahulrkr1996.github.io/",
-	  "logo": "https://rahulrkr1996.github.io/assets/logo.png",
-	  "description": "Indie game studio crafting immersive gaming experiences, stylized worlds, and cross-platform games for WebGL, PC, mobile, and VR.",
-	  "sameAs": [
-	    "https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ",
-	    "https://www.instagram.com/miragegames252/",
-	    "https://www.linkedin.com/company/108400432"
-	  ]
-	}
-  </script>
+    <script type="application/ld+json">
+  	{
+  	  "@context": "https://schema.org",
+  	  "@type": "Organization",
+  	  "name": "Mirage Reality Labs",
+  	  "url": "https://rahulrkr1996.github.io/",
+  	  "logo": "https://rahulrkr1996.github.io/assets/logo.png",
+  	  "description": "Indie game studio crafting immersive gaming experiences, stylized worlds, and cross-platform games for WebGL, PC, mobile, and VR.",
+  	  "sameAs": [
+  	    "https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ",
+  	    "https://www.instagram.com/miragegames252/",
+  	    "https://www.linkedin.com/company/108400432"
+  	  ]
+  	}
+    </script>
+  <link rel="preload" href="assets/hero_thumbnail.jpg" as="image">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="dark">
 
 </head>
 
@@ -95,7 +102,7 @@
 
     <div class="flex items-center gap-3">
       <!-- Added width/height to logo -->
-      <img src="assets/logo.png" width="40" height="40" class="h-10 w-auto" alt="Mirage Reality Labs Logo">
+      <img src="assets/logo.png" decoding="async" width="40" height="40" class="h-10 w-auto" alt="Mirage Reality Labs Logo">
       <span class="text-2xl font-bold" style="color:#00f7ff;">Mirage Reality Labs</span>
     </div>
 
@@ -131,22 +138,6 @@
   </div>
 </nav>
 
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  // Optional: close menu when a link is clicked
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  });
-</script>
-
 
 <!-- HERO (simple autoplay background video) -->
 <div class="relative w-full min-h-screen overflow-hidden" id="home">
@@ -157,11 +148,15 @@
     class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden"
     src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM&modestbranding=1&rel=0&showinfo=0"
     frameborder="0"
+    loading="lazy"
     allow="autoplay; encrypted-media"
+    title="DeepVRse Trailer Background Video"
+    aria-label="DeepVRse Background Video"
   ></iframe>
 
   <!-- Mobile fallback banner -->
   <img 
+    decoding="async"
     id="heroMobileBanner"
     src="assets/hero_thumbnail.jpg"
     class="absolute inset-0 w-full h-full object-cover z-0 hidden"
@@ -224,7 +219,7 @@
 
     <!-- DeepVRse -->
     <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;" data-aos="fade-up">
-      <img src="assets/deepvrse_banner.jpg" alt="DeepVRse game banner" loading="lazy" class="rounded-xl mb-4 w-full object-cover">
+      <img src="assets/deepvrse_banner.jpg" alt="DeepVRse game banner" decoding="async" loading="lazy" class="rounded-xl mb-4 w-full object-cover">
       <h3 class="text-2xl font-bold" style="color:#00f7ff;">🔥 DeepVRse</h3>
 
       <p class="text-gray-300 mt-2 text-sm">
@@ -249,7 +244,7 @@
 
     <!-- Seeds of Life -->
     <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;" data-aos="fade-up">
-      <img src="assets/interstellar_cover.jpg" alt="Seeds of Life cover" loading="lazy" class="rounded-xl mb-4 w-full object-cover">
+      <img src="assets/interstellar_cover.jpg" alt="Seeds of Life cover" loading="lazy" decoding="async" class="rounded-xl mb-4 w-full object-cover">
       <h3 class="text-2xl font-bold" style="color:#00f7ff;">Seeds of Life</h3>
 
       <p class="text-gray-300 mt-2 text-sm">
@@ -286,6 +281,7 @@
           src="https://www.youtube.com/embed/LUPxyB2m7ko"
           frameborder="0"
           loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
           allowfullscreen>
         </iframe>
       </div>
@@ -324,9 +320,9 @@
       <div class="rounded-xl mb-4 overflow-hidden relative">
         <div class="slider w-full h-48 relative overflow-hidden">
           <div class="slides flex transition-transform duration-500" id="unitySlider">
-            <img src="assets/unity_assets_1.jpg" loading="lazy" alt="Unity asset preview 1" class="w-full object-cover">
-            <img src="assets/unity_assets_2.jpg" loading="lazy" alt="Unity asset preview 2" class="w-full object-cover">
-            <img src="assets/unity_assets_3.jpg" loading="lazy" alt="Unity asset preview 3" class="w-full object-cover">
+            <img src="assets/unity_assets_1.jpg" loading="lazy" decoding="async" alt="Unity asset preview 1" class="w-full object-cover">
+            <img src="assets/unity_assets_2.jpg" loading="lazy" decoding="async" alt="Unity asset preview 2" class="w-full object-cover">
+            <img src="assets/unity_assets_3.jpg" loading="lazy" decoding="async" alt="Unity asset preview 3" class="w-full object-cover">
           </div>
         </div>
         <div class="flex justify-center gap-2 mt-2">
@@ -342,7 +338,7 @@
 
     <!-- Tutorials -->
     <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;">
-      <img src="assets/youtube_banner.jpg" loading="lazy" alt="Tutorial Banner" class="rounded-xl mb-4 w-full object-cover">
+      <img src="assets/youtube_banner.jpg" loading="lazy" decoding="async" alt="Tutorial Banner" class="rounded-xl mb-4 w-full object-cover">
       <h3 class="text-xl font-bold" style="color:#00f7ff;">Featured Tutorial</h3>
       <p class="text-gray-300 text-sm mt-2">Latest AI Character System tutorial.</p>
 
@@ -403,7 +399,7 @@
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews" class="py-20 px-6" style="background:#081519%;">
+<section id="reviews" class="py-20 px-6" style="background:#081519;">
   <h2 class="text-4xl font-bold text-center" style="color:#00f7ff;" data-aos="fade-up">Reviews & Feedback</h2>
   <div class="w-24 h-1 mx-auto rounded-full mt-3 mb-10" style="background:#ff9e40;"></div>
 
@@ -474,7 +470,7 @@
 
     <!-- Rahul -->
     <div class="p-6 text-center rounded-2xl shadow-lg bg-[#0f1c20] card" data-aos="fade-up">
-      <img src="assets/rahul.jpg" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#00f7ff]" alt="Rahul Kumar">
+      <img src="assets/rahul.jpg" decoding="async" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#00f7ff]" alt="Rahul Kumar">
       <h3 class="text-2xl font-bold" style="color:#00f7ff;">Rahul Kumar</h3>
       <p class="text-gray-300 text-sm mt-1">Lead Developer</p>
 
@@ -487,7 +483,7 @@
 
     <!-- Puja -->
     <div class="p-6 text-center rounded-2xl shadow-lg bg-[#0f1c20] card" data-aos="fade-up">
-      <img src="assets/puja.jpg" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#00f7ff]" alt="Puja Pandey">
+      <img src="assets/puja.jpg" decoding="async" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#00f7ff]" alt="Puja Pandey">
       <h3 class="text-2xl font-bold" style="color:#00f7ff;">Puja Pandey</h3>
       <p class="text-gray-300 text-sm mt-1">UI / UX Designer</p>
 
@@ -540,13 +536,37 @@
 
 <!-- AOS Init -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "DeepVRse Gameplay Trailer",
+  "description": "Official trailer showing gameplay of DeepVRse.",
+  "thumbnailUrl": "https://rahulrkr1996.github.io/assets/hero_thumbnail.jpg",
+  "uploadDate": "2024-12-01T00:00:00+00:00",
+  "contentUrl": "https://www.youtube.com/watch?v=XFV7doKR9MM",
+  "embedUrl": "https://www.youtube.com/embed/XFV7doKR9MM"
+}
+</script>
 <!-- Custom functions -->
 <script>
 AOS.init({
   once: true
 });
 
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+// Optional: close menu when a link is clicked
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+});
 
 let unityIndex = 0;
 function slideUnity(i) {
@@ -555,22 +575,20 @@ function slideUnity(i) {
     `translateX(-${i * 100}%)`;
 }
 
-</script>
-<script>
-  function isIOS() {
-    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
+function isIOS() {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
 
-  const video = document.getElementById("heroVideoDesktop");
-  const banner = document.getElementById("heroMobileBanner");
+const video = document.getElementById("heroVideoDesktop");
+const banner = document.getElementById("heroMobileBanner");
 
-  if (isIOS()) {
-    // iOS cannot autoplay YouTube background videos
-    banner.classList.remove("hidden");
-  } else {
-    // Everyone else: video autoplays normally
-    video.classList.remove("hidden");
-  }
+if (isIOS()) {
+  // iOS cannot autoplay YouTube background videos
+  banner.classList.remove("hidden");
+} else {
+  // Everyone else: video autoplays normally
+  video.classList.remove("hidden");
+}
 </script>
 
 </body>
