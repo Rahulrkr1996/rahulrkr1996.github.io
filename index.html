@@ -4,24 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mirage Reality Labs – Indie VR/XR Game Studio</title>
+  <title>Mirage Reality Labs - Indie Game Studio | Immersive Worlds & Stylized Games</title>
 
   <!-- Meta -->
-  <meta name="description" content="Mirage Reality Labs builds immersive VR/XR games, stylized 3D assets, and high-quality game development experiences." />
-  <meta name="keywords" content="Unity assets, VR games, XR studio, indie game developer, DeepVRse, Mirage Reality Labs, Blender 3D assets" />
+  <meta name="description" content="Mirage Reality Labs is an indie game studio creating immersive worlds, stylized 3D art, and atmospheric gameplay across WebGL, PC, mobile, and VR. Explore our games, assets, and development services." />
+  <meta name="keywords" content="indie game studio, immersive games, stylized 3D art, Unity game development, WebGL games, PC indie games, mobile games, VR games, AI driven gameplay, Mirage Reality Labs, DeepVRse" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Mirage Reality Labs – Indie VR/XR Studio" />
-  <meta property="og:description" content="Immersive VR/XR games, stylized art, and premium game assets." />
-  <meta property="og:image" content="https://rahulrkr1996.github.io/assets/og_banner.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rahulrkr1996.github.io/" />
+    <meta property="og:title" content="Mirage Reality Labs – Indie Game Studio" />
+	<meta property="og:description" content="We create immersive indie games, stylized worlds, and atmospheric experiences across WebGL, PC, mobile and VR." />
+	<meta property="og:image" content="https://rahulrkr1996.github.io/assets/og_banner.jpg" />
+	<meta property="og:url" content="https://rahulrkr1996.github.io/" />
+	<meta property="og:type" content="website" />
+
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mirage Reality Labs – Indie VR/XR Studio" />
-  <meta name="twitter:description" content="Immersive VR/XR games, stylized art and innovative game experiences." />
   <meta name="twitter:image" content="https://rahulrkr1996.github.io/assets/og_banner.jpg" />
+  <meta name="twitter:title" content="Mirage Reality Labs - Indie Game Studio" />
+  <meta name="twitter:description" content="Stylized indie games, immersive worlds, and cross platform experiences." />
+
+
 
   <link rel="canonical" href="https://rahulrkr1996.github.io/" />
 
@@ -56,6 +59,23 @@
       100% { box-shadow: 0 0 10px #00f7ff; }
     }
   </style>
+
+  <script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Organization",
+	  "name": "Mirage Reality Labs",
+	  "url": "https://rahulrkr1996.github.io/",
+	  "logo": "https://rahulrkr1996.github.io/assets/logo.png",
+	  "description": "Indie game studio crafting immersive gaming experiences, stylized worlds, and cross-platform games for WebGL, PC, mobile, and VR.",
+	  "sameAs": [
+	    "https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ",
+	    "https://www.instagram.com/miragegames252/",
+	    "https://www.linkedin.com/company/108400432"
+	  ]
+	}
+  </script>
+
 </head>
 
 <body class="text-white font-sans overflow-x-hidden">
@@ -125,34 +145,58 @@
     });
   });
 </script>
+<script>
+document.getElementById("playHeroVideo").addEventListener("click", function () {
+  const container = document.getElementById("heroVideo");
 
-<!-- HERO -->
-<div class="relative w-full min-h-screen overflow-hidden" id="home">
-  <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+  container.innerHTML = `
     <iframe 
       class="w-full h-full object-cover"
       src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM&modestbranding=1&showinfo=0"
       frameborder="0"
       allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
     ></iframe>
+  `;
+});
+</script>
+
+<!-- HERO -->
+<div class="relative w-full min-h-screen overflow-hidden" id="home">
+<div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+  <div id="heroVideo" class="w-full h-full">
+    <img 
+      src="assets/hero_thumbnail.jpg" 
+      alt="DeepVRse Trailer Background" 
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+
+    <button id="playHeroVideo"
+      class="absolute inset-0 m-auto text-white text-6xl opacity-60 hover:opacity-100 transition pointer-events-auto"
+      style="width:80px;height:80px;">
+      ▶
+    </button>
   </div>
+</div>
 
   <div class="absolute inset-0 bg-black/60 z-10"></div>
 
   <section class="relative z-20 min-h-screen flex flex-col justify-end items-center text-center px-6 pb-24" data-aos="fade-up">
-    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-xl" style="color:#00f7ff;">
-      Building Immersive Game Experiences
-    </h1>
-    <p class="max-w-2xl text-lg md:text-xl text-gray-200">
-      Mirage Reality Labs creates immersive games, stylized 3D assets, and VR/XR experiences.
-    </p>
+	  <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-xl" style="color:#00f7ff;">
+	    Crafting Immersive Worlds & Stylized Indie Games
+	  </h1>
 
-    <a href="#games"
-       class="mt-8 px-10 py-4 text-lg font-semibold rounded-xl shadow-xl transition"
-       style="background:#00f7ff; color:#000;">
-      See Projects
-    </a>
-  </section>
+	  <p class="max-w-2xl text-lg md:text-xl text-gray-200 leading-relaxed">
+	    An indie studio creating atmospheric, story driven, and visually distinct games across WebGL, PC, mobile and VR.
+	  </p>
+
+	  <a href="#games"
+	     class="mt-8 px-10 py-4 text-lg font-semibold rounded-xl shadow-xl transition"
+	     style="background:#00f7ff; color:#000;">
+	    Explore Our Games
+	  </a>
+	</section>
+
 </div>
 
 <!-- ABOUT -->
@@ -162,11 +206,20 @@
     <div class="w-24 h-1 mx-auto mb-4 rounded-full" style="background:#ff9e40;"></div>
 
     <p class="text-gray-300 mt-6 leading-relaxed">
-      Mirage Reality Labs is an indie game studio crafting immersive VR/XR titles, stylized art,
-      and high-quality game development services. Built by a passionate developer–designer duo.
+      Mirage Reality Labs is an indie game studio focused on building experiences that stay with players long after the screen fades.  
+      Our work blends stylized art, immersive atmosphere, experimental mechanics, and thoughtful game design.
+      <br><br>
+      
+      Great games thrive on <span style="color:#00f7ff;">strong worlds, emotional impact, and meaningful player discovery</span>.  
+	  Every title we build on <span style="color:#00f7ff;">WebGL, PC, mobile, and VR</span> is guided by this belief.
+
+      <br><br>
+
+      As a small, passionate team, we prototype fast, iterate boldly, and push ourselves to create work that feels unique, expressive, and deeply engaging.
     </p>
   </div>
 </section>
+
 
 <!-- GAMES -->
 <section id="games" class="py-20 px-6" style="background:#0a161b;">
