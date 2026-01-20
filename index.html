@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://unpkg.com">
 
   <meta charset="UTF-8" />
@@ -20,534 +19,347 @@
   <meta property="og:url" content="https://rahulrkr1996.github.io/" />
   <meta property="og:type" content="website" />
 
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://rahulrkr1996.github.io/assets/og_banner.jpg" />
   <meta name="twitter:title" content="Mirage Reality Labs - Indie Game Studio" />
   <meta name="twitter:description" content="Stylized indie games, immersive worlds, and cross platform experiences." />
 
-
-
   <link rel="canonical" href="https://rahulrkr1996.github.io/" />
   <link rel="preload" href="assets/logo.png" as="image">
-
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-      body { background: #081012; }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-      }
-
-      .card {
-        transition: all .3s ease;
-      }
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 30px rgba(0,255,255,0.15);
-      }
-
-      @keyframes pulse {
-        0% { box-shadow: 0 0 10px #00f7ff; }
-        50% { box-shadow: 0 0 25px #00f7ff; }
-        100% { box-shadow: 0 0 10px #00f7ff; }
-      }
-    </style>
-
-    <script type="application/ld+json">
-  	{
-  	  "@context": "https://schema.org",
-  	  "@type": "Organization",
-  	  "name": "Mirage Reality Labs",
-  	  "url": "https://rahulrkr1996.github.io/",
-  	  "logo": "https://rahulrkr1996.github.io/assets/logo.png",
-  	  "description": "Indie game studio crafting immersive gaming experiences, stylized worlds, and cross-platform games for WebGL, PC, mobile, and VR.",
-  	  "sameAs": [
-  	    "https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ",
-  	    "https://www.instagram.com/miragegames252/",
-  	    "https://www.linkedin.com/company/108400432"
-  	  ]
-      "alternateName": [
-        "Mirage Games",
-        "Mirage Game Studio",
-        "Mirage Studio",
-        "Mirage Labs",
-        "Mirage Game Developers",
-        "Mirage Reality"
-      ]
-  	}
-    </script>
   <link rel="preload" href="assets/hero_thumbnail.jpg" as="image">
   <link rel="apple-touch-icon" href="assets/logo.png">
-  <meta http-equiv="Content-Language" content="en">
   <meta name="color-scheme" content="dark">
 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom style -->
+  <style>
+    body { background:#081012; color:white; }
+    html { scroll-behavior:smooth; scroll-padding-top:80px; }
+
+    .neon { color:#00f7ff; }
+    .bg-card { background:#0f1c20; }
+    .section-dark { background:#081519; }
+    .section-darker { background:#0a161b; }
+
+    .card-hover { transition:.3s ease; }
+    .card-hover:hover {
+      transform:translateY(-6px);
+      box-shadow:0 10px 30px rgba(0,255,255,.15);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow:0 0 10px #00f7ff; }
+      50% { box-shadow:0 0 25px #00f7ff; }
+      100% { box-shadow:0 0 10px #00f7ff; }
+    }
+  </style>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mirage Reality Labs",
+    "url": "https://rahulrkr1996.github.io/",
+    "logo": "https://rahulrkr1996.github.io/assets/logo.png",
+    "description": "Indie game studio crafting immersive gaming experiences, stylized worlds, and cross-platform games for WebGL, PC, mobile, and VR.",
+    "sameAs": [
+      "https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ",
+      "https://www.instagram.com/miragegames252/",
+      "https://www.linkedin.com/company/108400432"
+    ],
+    "alternateName": [
+      "Mirage Games",
+      "Mirage Game Studio",
+      "Mirage Studio",
+      "Mirage Labs",
+      "Mirage Game Developers",
+      "Mirage Reality"
+    ]
+  }
+  </script>
 </head>
 
-<body class="text-white font-sans overflow-x-hidden">
+<body>
 
-<!-- FLOATING PLAY BUTTON (responsive sizing) -->
+<!-- Floating Button -->
 <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.BelowTheBlue"
    target="_blank"
-   class="fixed bottom-4 right-4 z-50 px-4 py-2 rounded-full shadow-xl font-bold text-black text-sm md:px-6 md:py-3 md:text-base"
-   style="background:#00f7ff; animation:pulse 2s infinite;">
+   class="position-fixed bottom-0 end-0 m-4 px-4 py-2 rounded-pill fw-bold text-dark text-decoration-none"
+   style="background:#00f7ff; animation:pulse 2s infinite; z-index:999;">
    ▶ Play DeepVRse
 </a>
 
 <!-- NAVBAR -->
-<nav class="w-full fixed top-0 z-30 bg-[#0a1418]/80 backdrop-blur-md shadow-lg border-b border-[#00f7ff]/20">
-  <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black bg-opacity-75 shadow">
+  <div class="container">
+    <a class="navbar-brand neon fw-bold d-flex align-items-center gap-2" href="#">
+      <img src="assets/logo.png" width="36" height="36">
+      Mirage Reality Labs
+    </a>
 
-    <div class="flex items-center gap-3">
-      <!-- Added width/height to logo -->
-      <img src="assets/logo.png" decoding="async" width="40" height="40" class="h-10 w-auto" alt="Mirage Reality Labs Logo">
-      <span class="text-2xl font-bold" style="color:#00f7ff;">Mirage Reality Labs</span>
-    </div>
-
-    <!-- Desktop nav -->
-    <div class="space-x-6 text-gray-300 hidden md:block">
-      <a href="#home" class="hover:text-[#00f7ff]">Home</a>
-      <a href="#games" class="hover:text-[#00f7ff]">Games</a>
-      <a href="#assets" class="hover:text-[#00f7ff]">Assets</a>
-      <a href="#tech" class="hover:text-[#00f7ff]">Tech</a>
-      <a href="#reviews" class="hover:text-[#00f7ff]">Reviews</a>
-      <a href="#services" class="hover:text-[#00f7ff]">Services</a>
-      <a href="#team" class="hover:text-[#00f7ff]">Team</a>
-      <a href="#contact" class="hover:text-[#00f7ff]">Contact</a>
-    </div>
-
-    <!-- Mobile hamburger -->
-    <button id="menuBtn" class="md:hidden text-[#00f7ff] text-3xl">
-      <i class="fas fa-bars"></i>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-  </div>
-
-  <!-- Mobile menu -->
-  <div id="mobileMenu" class="hidden flex flex-col bg-[#0a1418] px-6 pb-4 md:hidden text-gray-300">
-    <a href="#home" class="py-2 hover:text-[#00f7ff]">Home</a>
-    <a href="#games" class="py-2 hover:text-[#00f7ff]">Games</a>
-    <a href="#assets" class="py-2 hover:text-[#00f7ff]">Assets</a>
-    <a href="#tech" class="py-2 hover:text-[#00f7ff]">Tech</a>
-    <a href="#reviews" class="py-2 hover:text-[#00f7ff]">Reviews</a>
-    <a href="#services" class="py-2 hover:text-[#00f7ff]">Services</a>
-    <a href="#team" class="py-2 hover:text-[#00f7ff]">Team</a>
-    <a href="#contact" class="py-2 hover:text-[#00f7ff]">Contact</a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
+        <li class="nav-item"><a class="nav-link" href="#assets">Assets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech">Tech</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
+<!-- HERO -->
+<section id="home" class="vh-100 position-relative overflow-hidden">
 
-<!-- HERO (simple autoplay background video) -->
-<div class="relative w-full min-h-screen overflow-hidden" id="home">
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background:url('assets/hero_thumbnail.jpg') center/cover no-repeat;"></div>
 
-  <!-- Desktop background video -->
-  <iframe 
-    id="heroVideoDesktop"
-    class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden"
-    src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM&modestbranding=1&rel=0&showinfo=0"
-    frameborder="0"
-    loading="lazy"
-    allow="autoplay; encrypted-media"
-    title="DeepVRse Trailer Background Video"
-    aria-label="DeepVRse Background Video"
-  ></iframe>
+  <iframe class="position-absolute top-0 start-0 w-100 h-100"
+    src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM"
+    style="border:0; pointer-events:none;"
+    allow="autoplay"></iframe>
 
-  <!-- Mobile fallback banner -->
-  <img 
-    decoding="async"
-    id="heroMobileBanner"
-    src="assets/hero_thumbnail.jpg"
-    class="absolute inset-0 w-full h-full object-cover z-0 hidden"
-    alt="DeepVRse Background Banner"
-  />
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75"></div>
 
-  <!-- overlay -->
-  <div class="absolute inset-0 bg-black/60 z-10"></div>
+  <div class="container h-100 position-relative d-flex align-items-end pb-5 text-center">
+    <div class="w-100">
+      <h1 class="display-4 fw-bold neon">Crafting Immersive Worlds & Stylized Indie Games</h1>
+      <p class="lead text-light mx-auto mt-3" style="max-width:720px;">
+        An indie studio creating atmospheric, story driven, and visually distinct games across WebGL, PC, mobile and VR.
+      </p>
+      <a href="#games" class="btn btn-info btn-lg fw-semibold text-dark mt-3">Explore Our Games</a>
+    </div>
+  </div>
+</section>
+<section id="about" class="py-5 section-dark text-center">
+  <div class="container">
+    <h2 class="fw-bold neon">About Us</h2>
+    <div class="mx-auto my-3" style="width:90px;height:4px;background:#ff9e40;"></div>
 
-  <section class="relative z-20 min-h-screen flex flex-col justify-end items-center text-center px-6 pb-24" data-aos="fade-up">
-    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-xl" style="color:#00f7ff;">
-      Crafting Immersive Worlds & Stylized Indie Games
-    </h1>
-
-    <p class="max-w-2xl text-lg md:text-xl text-gray-200 leading-relaxed">
-      An indie studio creating atmospheric, story driven, and visually distinct games across WebGL, PC, mobile and VR.
-    </p>
-
-    <a href="#games"
-       class="mt-8 px-10 py-4 text-lg font-semibold rounded-xl shadow-xl transition"
-       style="background:#00f7ff; color:#000;">
-      Explore Our Games
-    </a>
-  </section>
-
-</div>
-
-
-
-<!-- ABOUT -->
-<section id="about" class="py-20 px-6" style="background:#081519;">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-bold" style="color:#00f7ff;">About Us</h2>
-    <div class="w-24 h-1 mx-auto mb-4 rounded-full" style="background:#ff9e40;"></div>
-
-    <p class="text-gray-300 mt-6 leading-relaxed">
-      Mirage Reality Labs is an indie game studio focused on building experiences that stay with players long after the screen fades.  
+    <p class="text-secondary mx-auto" style="max-width:900px;">
+      Mirage Reality Labs is an indie game studio focused on building experiences that stay with players long after the screen fades.
       Our work blends stylized art, immersive atmosphere, experimental mechanics, and thoughtful game design.
       <br><br>
-      
-      Great games thrive on <span style="color:#00f7ff;">strong worlds, emotional impact, and meaningful player discovery</span>.  
-	  Every title we build on <span style="color:#00f7ff;">WebGL, PC, mobile, and VR</span> is guided by this belief.
-
+      Great games thrive on <span class="neon">strong worlds, emotional impact, and meaningful player discovery</span>.
+      Every title we build on <span class="neon">WebGL, PC, mobile, and VR</span> is guided by this belief.
       <br><br>
-
-      As a small, passionate team, we prototype fast, iterate boldly, and push ourselves to create work that feels unique, expressive, and deeply engaging.
+      As a small, passionate team, we prototype fast, iterate boldly, and push ourselves to create deeply engaging experiences.
     </p>
   </div>
 </section>
-
-
-<!-- GAMES -->
-<section id="games" class="py-20 px-6" style="background:#0a161b;">
-  <div class="max-w-6xl mx-auto text-center mb-12" data-aos="fade-up">
-    <h2 class="text-4xl font-bold" style="color:#00f7ff;">Games</h2>
-    <div class="w-24 h-1 mx-auto rounded-full" style="background:#ff9e40;"></div>
+<section id="games" class="py-5 section-darker">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold neon">Games</h2>
+    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
 
-    <!-- DeepVRse -->
-    <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;" data-aos="fade-up">
-      <img src="assets/deepvrse_banner.jpg" alt="DeepVRse game banner" decoding="async" loading="lazy" class="rounded-xl mb-4 w-full object-cover">
-      <h3 class="text-2xl font-bold" style="color:#00f7ff;">🔥 DeepVRse</h3>
+      <!-- DeepVRse -->
+      <div class="col-md-6">
+        <div class="p-4 rounded-4 bg-card card-hover h-100">
+          <img src="assets/deepvrse_banner.jpg" class="img-fluid rounded mb-3">
+          <h4 class="fw-bold neon">🔥 DeepVRse</h4>
+          <p class="text-secondary small">
+            Underwater superhero roguelike with tentacle combat, lasers, VR mode, mining drones and base building.
+          </p>
 
-      <p class="text-gray-300 mt-2 text-sm">
-        Underwater superhero roguelike with tentacle combat, lasers, VR mode, mining drones and base building.
-      </p>
-      <p class="text-gray-300 mt-2 text-sm">
-         Available platforms and links :
-      </p>
-
-      <div class="flex flex-wrap gap-3 mt-4">
-        <a href="https://mirage-reality-labs.itch.io/deepvrse" target="_blank"
-           class="px-5 py-2 rounded-lg font-semibold transition"
-           style="background:#00f7ff; color:#000;">WebGL</a>
-
-        <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.DeepVRse" target="_blank"
-           class="px-5 py-2 rounded-lg font-semibold border border-[#00f7ff]" style="color:#00f7ff;">Android</a>
-
-        <a href="https://www.youtube.com/watch?v=XFV7doKR9MM" target="_blank"
-           class="px-5 py-2 rounded-lg font-semibold border border-[#ff9e40]" style="color:#ff9e40;">Trailer</a>
-      </div>
-    </div>
-
-    <!-- Seeds of Life -->
-    <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;" data-aos="fade-up">
-      <img src="assets/interstellar_cover.jpg" alt="Seeds of Life cover" loading="lazy" decoding="async" class="rounded-xl mb-4 w-full object-cover">
-      <h3 class="text-2xl font-bold" style="color:#00f7ff;">Seeds of Life</h3>
-
-      <p class="text-gray-300 mt-2 text-sm">
-        AI-driven interstellar journey simulator with narrative exploration.
-      </p>
-      <p class="text-gray-300 mt-2 text-sm">
-         Try Pre Alpha release on Web :
-      <a href="https://mirage-reality-labs.itch.io/interstellar-journey-simulator" target="_blank"
-         class="inline-block mt-4 px-5 py-2 rounded-lg font-semibold transition"
-         style="background:#00f7ff; color:#000;">WebGL</a>
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ASSETS -->
-<section id="assets" class="py-20 px-6" style="background:#081519;">
-  <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-bold" style="color:#00f7ff;">Game Assets</h2>
-    <div class="w-24 h-1 mx-auto rounded-full" style="background:#ff9e40;"></div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-    <!-- Octopus Asset -->
-    <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;">
-      
-      <!-- Video -->
-      <div class="rounded-xl mb-4 overflow-hidden" 
-           style="position:relative; padding-bottom:56.25%; height:0;">
-        <iframe 
-          style="position:absolute; top:0; left:0; width:100%; height:100%;"
-          src="https://www.youtube.com/embed/LUPxyB2m7ko"
-          frameborder="0"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <!-- Title -->
-      <h3 class="text-xl font-bold mb-1" style="color:#00f7ff;">Cartoon Octopus – Rigged</h3>
-
-      <!-- Short description -->
-      <p class="text-gray-300 text-sm mb-4">
-        Fully rigged stylized octopus, optimized for Unity with clean topology and animation-ready bones.
-      </p>
-
-      <!-- Buttons -->
-      <div class="flex flex-col gap-3">
-
-        <a href="https://assetstore.unity.com/packages/3d/characters/creatures/cartoon-octopus-rigged-341500" 
-           target="_blank"
-           class="w-full text-center px-5 py-2 rounded-lg font-semibold transition"
-           style="background:#00f7ff; color:#000;">
-          Buy on Unity Asset Store
-        </a>
-
-        <a href="https://mirage-reality-labs.itch.io/cartoon-octopus-rigged" 
-           target="_blank"
-           class="w-full text-center px-5 py-2 rounded-lg font-semibold transition border border-[#00f7ff]"
-           style="color:#00f7ff;">
-          Buy on itch.io
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- Unity Slider -->
-    <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;">
-      <div class="rounded-xl mb-4 overflow-hidden relative">
-        <div class="slider w-full h-48 relative overflow-hidden">
-          <div class="slides flex transition-transform duration-500" id="unitySlider">
-            <img src="assets/unity_assets_1.jpg" loading="lazy" decoding="async" alt="Unity asset preview 1" class="w-full object-cover">
-            <img src="assets/unity_assets_2.jpg" loading="lazy" decoding="async" alt="Unity asset preview 2" class="w-full object-cover">
-            <img src="assets/unity_assets_3.jpg" loading="lazy" decoding="async" alt="Unity asset preview 3" class="w-full object-cover">
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <a href="https://mirage-reality-labs.itch.io/deepvrse" target="_blank" class="btn btn-info fw-semibold text-dark">WebGL</a>
+            <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.DeepVRse" target="_blank" class="btn btn-outline-info">Android</a>
+            <a href="https://www.youtube.com/watch?v=XFV7doKR9MM" target="_blank" class="btn btn-outline-warning">Trailer</a>
           </div>
         </div>
-        <div class="flex justify-center gap-2 mt-2">
-          <button onclick="slideUnity(0)" class="w-3 h-3 rounded-full" style="background:#00f7ff;"></button>
-          <button onclick="slideUnity(1)" class="w-3 h-3 rounded-full bg-gray-500"></button>
-          <button onclick="slideUnity(2)" class="w-3 h-3 rounded-full bg-gray-500"></button>
+      </div>
+
+      <!-- Seeds of Life -->
+      <div class="col-md-6">
+        <div class="p-4 rounded-4 bg-card card-hover h-100">
+          <img src="assets/interstellar_cover.jpg" class="img-fluid rounded mb-3">
+          <h4 class="fw-bold neon">Seeds of Life</h4>
+          <p class="text-secondary small">
+            AI-driven interstellar journey simulator with narrative exploration.
+          </p>
+
+          <a href="https://mirage-reality-labs.itch.io/interstellar-journey-simulator"
+             target="_blank"
+             class="btn btn-info fw-semibold text-dark mt-2">
+             Play Pre-Alpha (WebGL)
+          </a>
         </div>
       </div>
 
-      <h3 class="text-xl font-bold" style="color:#00f7ff;">Unity Asset Store Packs</h3>
-      <p class="text-gray-300 text-sm">Multiple underwater packs pending review.</p>
     </div>
+  </div>
+</section>
+<section id="assets" class="py-5 section-dark">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold neon">Game Assets</h2>
+    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
+  </div>
 
-    <!-- Tutorials -->
-    <div class="p-6 rounded-2xl shadow-lg card" style="background:#0f1c20;">
-      <img src="assets/youtube_banner.jpg" loading="lazy" decoding="async" alt="Tutorial Banner" class="rounded-xl mb-4 w-full object-cover">
-      <h3 class="text-xl font-bold" style="color:#00f7ff;">Featured Tutorial</h3>
-      <p class="text-gray-300 text-sm mt-2">Latest AI Character System tutorial.</p>
+  <div class="container">
+    <div class="row g-4">
 
-      <a href="https://www.youtube.com/watch?v=Dk98lgsAO58" target="_blank"
-         class="inline-block mt-4 px-5 py-2 rounded-lg transition font-semibold"
-         style="background:#00f7ff; color:#000;">Watch</a>
+      <div class="col-md-4">
+        <div class="p-4 bg-card rounded-4 card-hover h-100">
+          <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+            <iframe src="https://www.youtube.com/embed/LUPxyB2m7ko" allowfullscreen></iframe>
+          </div>
+          <h5 class="fw-bold neon">Cartoon Octopus – Rigged</h5>
+          <p class="text-secondary small">Fully rigged stylized octopus optimized for Unity.</p>
+
+          <div class="d-grid gap-2">
+            <a href="https://assetstore.unity.com/packages/3d/characters/creatures/cartoon-octopus-rigged-341500" target="_blank" class="btn btn-info fw-semibold text-dark">Unity Asset Store</a>
+            <a href="https://mirage-reality-labs.itch.io/cartoon-octopus-rigged" target="_blank" class="btn btn-outline-info">itch.io</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-card rounded-4 card-hover h-100 text-center">
+          <img src="assets/unity_assets_1.jpg" class="img-fluid rounded mb-3">
+          <h5 class="fw-bold neon">Unity Asset Packs</h5>
+          <p class="text-secondary small">Multiple underwater packs pending review.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-card rounded-4 card-hover h-100 text-center">
+          <img src="assets/youtube_banner.jpg" class="img-fluid rounded mb-3">
+          <h5 class="fw-bold neon">Featured Tutorial</h5>
+          <p class="text-secondary small">Latest AI Character System tutorial.</p>
+          <a href="https://www.youtube.com/watch?v=Dk98lgsAO58" target="_blank" class="btn btn-info fw-semibold text-dark">Watch</a>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
+<section id="tech" class="py-5 section-dark text-center">
+  <div class="container">
+    <h2 class="fw-bold neon">Technologies & Platforms</h2>
+    <div class="mx-auto my-3" style="width:90px;height:4px;background:#ff9e40;"></div>
 
+    <div class="row justify-content-center g-4 mt-4 fs-1">
+      <div class="col-4 col-md-2"><i class="fab fa-unity neon"></i><p class="fs-6 text-secondary mt-2">Unity</p></div>
+      <div class="col-4 col-md-2"><i class="fas fa-code neon"></i><p class="fs-6 text-secondary mt-2">C#</p></div>
+      <div class="col-4 col-md-2"><i class="fas fa-cube neon"></i><p class="fs-6 text-secondary mt-2">Blender</p></div>
+      <div class="col-4 col-md-2"><i class="fab fa-github neon"></i><p class="fs-6 text-secondary mt-2">GitHub</p></div>
+      <div class="col-4 col-md-2"><i class="fas fa-vr-cardboard neon"></i><p class="fs-6 text-secondary mt-2">VR</p></div>
+      <div class="col-4 col-md-2"><i class="fas fa-robot neon"></i><p class="fs-6 text-secondary mt-2">AI</p></div>
+    </div>
+  </div>
+</section>
+<section id="reviews" class="py-5 section-dark">
+  <div class="container text-center mb-4">
+    <h2 class="fw-bold neon">Reviews & Feedback</h2>
+    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
+  </div>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-5">
+        <div class="p-4 bg-card rounded-4 card-hover h-100">
+          <p class="fst-italic">“Amazing underwater atmosphere and fun rogue mechanics!”</p>
+          <span class="neon fw-bold">– Itch.io Player</span>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="p-4 bg-card rounded-4 card-hover h-100">
+          <p class="fst-italic">“The tentacle abilities and VR mode are crazy good!”</p>
+          <span class="neon fw-bold">– Android User</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="services" class="py-5 section-darker">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold neon">Services</h2>
+    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">Game Development</h5><p class="text-secondary small">Full builds, VR/XR mechanics, prototyping & optimization.</p></div></div>
+      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">3D Art & Assets</h5><p class="text-secondary small">Stylized characters, environments, rigs & materials.</p></div></div>
+      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">AI Integration</h5><p class="text-secondary small">Procedural systems & NPC intelligence.</p></div></div>
+      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">Tech Consulting</h5><p class="text-secondary small">Performance, pipelines, mobile & VR tuning.</p></div></div>
+
+    </div>
+  </div>
+</section>
+<section id="team" class="py-5 section-dark">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold neon">Our Team</h2>
+    <p class="text-secondary">The creators behind Mirage Reality Labs</p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-4">
+        <div class="p-4 bg-card rounded-4 text-center card-hover">
+          <img src="assets/rahul.jpg" class="rounded-circle mb-3" width="130" height="130">
+          <h5 class="neon fw-bold">Rahul Kumar</h5>
+          <p class="text-secondary small">Lead Developer</p>
+          <a href="https://www.linkedin.com/in/rahul-kumar-500027b2/" target="_blank" class="fs-3 text-secondary"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-card rounded-4 text-center card-hover">
+          <img src="assets/puja.jpg" class="rounded-circle mb-3" width="130" height="130">
+          <h5 class="neon fw-bold">Puja Pandey</h5>
+          <p class="text-secondary small">UI / UX Designer</p>
+          <a href="https://www.linkedin.com/in/puja-pandey-5952781b2/" target="_blank" class="fs-3 text-secondary"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-5 section-darker text-center">
+  <div class="container">
+    <h2 class="fw-bold neon">Contact</h2>
+    <p class="text-secondary mt-3">Business inquiries, collaborations & asset requests</p>
+
+    <div class="d-flex justify-content-center gap-4 fs-2 mt-4">
+      <a href="mailto:miragegames25@gmail.com" class="text-secondary"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ" class="text-secondary"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/miragegames252/" class="text-secondary"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/108400432" class="text-secondary"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 </section>
 
-<!-- TECH + TOOLS MERGED -->
-<section id="tech" class="py-20 px-6 text-center" style="background:#081519;">
-  <h2 class="text-4xl font-bold" style="color:#00f7ff;" data-aos="fade-up">Technologies & Platforms</h2>
-  <div class="w-24 h-1 mx-auto rounded-full mt-3 mb-12" style="background:#ff9e40;"></div>
-
-  <div class="flex flex-wrap justify-center gap-14 max-w-5xl mx-auto text-center" data-aos="fade-up">
-    <div class="text-center">
-      <i class="fab fa-unity text-5xl" style="color:#00f7ff;"></i>
-      <p class="mt-2 text-gray-300">Unity Engine</p>
-    </div>
-
-    <div class="text-center">
-      <i class="fas fa-code text-5xl" style="color:#00f7ff;"></i>
-      <p class="mt-2 text-gray-300">C# Systems</p>
-    </div>
-
-    <div class="text-center">
-      <i class="fas fa-cube text-5xl" style="color:#00f7ff;"></i>
-      <p class="mt-2 text-gray-300">Blender 3D</p>
-    </div>
-
-    <div class="text-center">
-      <i class="fab fa-git-alt text-5xl" style="color:#00f7ff;"></i>
-      <p class="mt-2 text-gray-300">Git + GitHub</p>
-    </div>
-
-    <div class="text-center">
-      <i class="fas fa-vr-cardboard text-5xl" style="color:#00f7ff;"></i>
-      <p class="mt-2 text-gray-300">VR Development</p>
-    </div>
-
-    <div class="text-center">
-      <i class="fas fa-robot text-5xl" style="color:#00f7ff;"></i>
-      <p class="mt-2 text-gray-300">AI Systems</p>
-    </div>
-  </div>
-
-  <!-- Tools Row -->
-  <div class="flex flex-wrap justify-center gap-12 text-5xl text-gray-400 mt-14" data-aos="fade-up">
-    <i class="fab fa-unity hover:text-[#00f7ff] transition"></i>
-    <i class="fab fa-itch-io hover:text-[#00f7ff] transition"></i>
-    <i class="fab fa-google-play hover:text-[#00f7ff] transition"></i>
-    <i class="fab fa-youtube hover:text-[#00f7ff] transition"></i>
-    <i class="fab fa-github hover:text-[#00f7ff] transition"></i>
-    <i class="fas fa-cube hover:text-[#00f7ff] transition"></i>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="py-20 px-6" style="background:#081519;">
-  <h2 class="text-4xl font-bold text-center" style="color:#00f7ff;" data-aos="fade-up">Reviews & Feedback</h2>
-  <div class="w-24 h-1 mx-auto rounded-full mt-3 mb-10" style="background:#ff9e40;"></div>
-
-  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-
-    <div class="p-6 rounded-xl shadow-xl bg-[#0f1c20] card" data-aos="fade-up">
-      <p class="text-gray-200 italic">“Amazing underwater atmosphere and fun rogue mechanics!”</p>
-      <span class="text-[#00f7ff] font-bold mt-2 block">– Itch.io Player</span>
-    </div>
-
-    <div class="p-6 rounded-xl shadow-xl bg-[#0f1c20] card" data-aos="fade-up">
-      <p class="text-gray-200 italic">“The tentacle abilities and VR mode are crazy good!”</p>
-      <span class="text-[#00f7ff] font-bold mt-2 block">– Android User</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-20 px-6" style="background:#0a161b;">
-  <div class="max-w-4xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-bold" style="color:#00f7ff;">Services</h2>
-    <div class="w-24 h-1 mx-auto rounded-full" style="background:#ff9e40;"></div>
-  </div>
-
-  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-
-    <div class="p-6 rounded-2xl shadow-lg bg-[#0f1c20] card">
-      <h3 class="text-xl font-bold mb-2" style="color:#00f7ff;">Game Development</h3>
-      <p class="text-gray-300 text-sm">
-        Full game builds, gameplay systems, VR/XR mechanics, prototyping & optimization.
-      </p>
-    </div>
-
-    <div class="p-6 rounded-2xl shadow-lg bg-[#0f1c20] card">
-      <h3 class="text-xl font-bold mb-2" style="color:#00f7ff;">3D Art & Asset Creation</h3>
-      <p class="text-gray-300 text-sm">
-        Stylized characters, creatures, environments, rigs, textures & materials.
-      </p>
-    </div>
-
-    <div class="p-6 rounded-2xl shadow-lg bg-[#0f1c20] card">
-      <h3 class="text-xl font-bold mb-2" style="color:#00f7ff;">AI Integration</h3>
-      <p class="text-gray-300 text-sm">
-        Procedural generation, NPC intelligence, AI-driven mechanics.
-      </p>
-    </div>
-
-    <div class="p-6 rounded-2xl shadow-lg bg-[#0f1c20] card">
-      <h3 class="text-xl font-bold mb-2" style="color:#00f7ff;">Tech Consulting</h3>
-      <p class="text-gray-300 text-sm">
-        Performance optimization, pipelines, mobile/VR tuning & project guidance.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team" class="py-20 px-6" style="background:#081519;">
-  <div class="max-w-5xl mx-auto text-center mb-10">
-    <h2 class="text-4xl font-bold" style="color:#00f7ff;" data-aos="fade-up">Our Team</h2>
-    <div class="w-24 h-1 mx-auto mt-2 rounded-full" style="background:#ff9e40;"></div>
-    <p class="text-gray-300 mt-4">The creators behind Mirage Reality Labs</p>
-  </div>
-
-  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-
-    <!-- Rahul -->
-    <div class="p-6 text-center rounded-2xl shadow-lg bg-[#0f1c20] card" data-aos="fade-up">
-      <img src="assets/rahul.jpg" decoding="async" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#00f7ff]" alt="Rahul Kumar">
-      <h3 class="text-2xl font-bold" style="color:#00f7ff;">Rahul Kumar</h3>
-      <p class="text-gray-300 text-sm mt-1">Lead Developer</p>
-
-      <a href="https://www.linkedin.com/in/rahul-kumar-500027b2/" 
-         target="_blank"
-         class="text-3xl mt-3 inline-block text-gray-300 hover:text-[#00f7ff] transition">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-
-    <!-- Puja -->
-    <div class="p-6 text-center rounded-2xl shadow-lg bg-[#0f1c20] card" data-aos="fade-up">
-      <img src="assets/puja.jpg" decoding="async" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#00f7ff]" alt="Puja Pandey">
-      <h3 class="text-2xl font-bold" style="color:#00f7ff;">Puja Pandey</h3>
-      <p class="text-gray-300 text-sm mt-1">UI / UX Designer</p>
-
-      <a href="https://www.linkedin.com/in/puja-pandey-5952781b2/" 
-         target="_blank"
-         class="text-3xl mt-3 inline-block text-gray-300 hover:text-[#00f7ff] transition">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-20 px-6 text-center" style="background:#0a161b;">
-  <h2 class="text-4xl font-bold mb-2" style="color:#00f7ff;" data-aos="fade-up">Contact</h2>
-  <div class="w-24 h-1 mx-auto mb-4 rounded-full" style="background:#ff9e40;"></div>
-
-  <p class="text-gray-300 mt-4">Business inquiries, collaborations & asset requests:</p>
-
-  <div class="flex justify-center gap-6 mt-6 text-3xl">
-
-    <a href="mailto:miragegames25@gmail.com" class="text-gray-300 hover:text-[#00f7ff] transition">
-      <i class="fas fa-envelope"></i>
-    </a>
-
-    <a href="https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ" target="_blank" class="text-gray-300 hover:text-[#ff4d4d] transition">
-      <i class="fab fa-youtube"></i>
-    </a>
-
-    <a href="https://www.instagram.com/miragegames252/" target="_blank" class="text-gray-300 hover:text-[#e1306c] transition">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.facebook.com/profile.php?id=61581496410555" target="_blank" class="text-gray-300 hover:text-[#1877f2] transition">
-      <i class="fab fa-facebook"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/company/108400432" target="_blank" class="text-gray-300 hover:text-[#0a66c2] transition">
-      <i class="fab fa-linkedin"></i>
-    </a>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-6 text-center" style="background:#0a1418; color:#00f7ff;">
+<footer class="py-3 text-center section-dark neon">
   © 2025 Mirage Reality Labs - All Rights Reserved
-  <p class="text-sm opacity-70">
-  Also known as: Mirage Games · Mirage Game Studio · Mirage Labs
-  </p>
-
 </footer>
 
-<!-- AOS Init -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- VIDEO SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -560,48 +372,10 @@
   "embedUrl": "https://www.youtube.com/embed/XFV7doKR9MM"
 }
 </script>
-<!-- Custom functions -->
-<script>
-AOS.init({
-  once: true
-});
 
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-});
-
-// Optional: close menu when a link is clicked
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-  });
-});
-
-let unityIndex = 0;
-function slideUnity(i) {
-  unityIndex = i;
-  document.getElementById('unitySlider').style.transform =
-    `translateX(-${i * 100}%)`;
-}
-
-function isIOS() {
-  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-}
-
-const video = document.getElementById("heroVideoDesktop");
-const banner = document.getElementById("heroMobileBanner");
-
-if (isIOS()) {
-  // iOS cannot autoplay YouTube background videos
-  banner.classList.remove("hidden");
-} else {
-  // Everyone else: video autoplays normally
-  video.classList.remove("hidden");
-}
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true });</script>
 
 </body>
 </html>
