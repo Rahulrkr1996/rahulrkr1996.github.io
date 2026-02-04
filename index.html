@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ084SCH20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RZ084SCH20');
+  </script>
   <link rel="preconnect" href="https://unpkg.com">
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mirage Reality Labs - Indie Game Studio | Immersive Worlds & Stylized Games</title>
+  <title>Mirage Reality Labs - Indie Game Studio | Immersive & Stylized Games for Mobile, WebGL & VR</title>
 
   <!-- Meta -->
   <meta name="description" content="Mirage Reality Labs is an indie game studio creating immersive worlds, stylized 3D art, and atmospheric gameplay across WebGL, PC, mobile, and VR. Explore our games, assets, and development services." />
@@ -69,6 +78,12 @@
 	  border: 3px solid #00f7ff;
 	  background:#000;
 	}
+  .game-thumb {
+    width: 100%;
+    height: 260px;        /* controls section height */
+    object-fit: cover;    /* crops nicely, no distortion */
+    border-radius: 12px;
+  }
 
   </style>
 
@@ -96,6 +111,34 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://rahulrkr1996.github.io/",
+    "name": "Mirage Reality Labs",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://rahulrkr1996.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "DeepVRse",
+    "genre": ["Roguelike", "Action", "VR", "Underwater"],
+    "platform": ["Android", "WebGL"],
+    "author": {
+      "@type": "Organization",
+      "name": "Mirage Reality Labs"
+    },
+    "url": "https://mirage-reality-labs.itch.io/deepvrse"
+  }
+  </script>
+
 </head>
 
 <body>
@@ -123,68 +166,98 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto gap-lg-3">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
-        <li class="nav-item"><a class="nav-link" href="#assets">Assets</a></li>
-        <li class="nav-item"><a class="nav-link" href="#tech">Tech</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#youtube">YouTube</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item">
+          <a class="btn btn-info text-dark fw-bold rounded-pill px-4" href="#contact">
+            Contact
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="vh-100 position-relative overflow-hidden">
+<section id="home" class="vh-100 d-flex align-items-center section-darker">
 
-  <div class="position-absolute top-0 start-0 w-100 h-100"
-       style="background:url('assets/hero_thumbnail.jpg') center/cover no-repeat;"></div>
+<div class="container">
+  <div class="row align-items-center g-5">
 
-  <iframe class="position-absolute top-0 start-0 w-100 h-100"
-    src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM"
-    style="border:0; pointer-events:none;"
-    allow="autoplay"></iframe>
+    <!-- LEFT TEXT -->
+    <div class="col-lg-6">
+      <h1 class="display-3 fw-bold text-white">
+        Unity & VR Game Studio for  
+        <span class="neon">Indie Developers & Publishers</span>
+      </h1>
 
-  <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75"></div>
-
-  <div class="container h-100 position-relative d-flex align-items-end pb-5 text-center">
-    <div class="w-100">
-      <h1 class="display-4 fw-bold neon">Crafting Immersive Worlds & Stylized Indie Games</h1>
-      <p class="lead text-light mx-auto mt-3" style="max-width:720px;">
-        An indie studio creating atmospheric, story driven, and visually distinct games across WebGL, PC, mobile and VR.
+      <p class="lead text-secondary mt-3">
+        We build polished gameplay, stylized art, and high performance Unity experiences  
+        across <strong>PC, Mobile, WebGL, and VR.</strong>
       </p>
-      <a href="#games" class="btn btn-info btn-lg fw-semibold text-dark mt-3">Explore Our Games</a>
+
+      <div class="mt-4 d-flex gap-3">
+        <a href="#work" class="btn btn-info btn-lg fw-bold text-dark rounded-pill px-5">
+          View Our Work
+        </a>
+        <a href="#contact" class="btn btn-outline-info btn-lg rounded-pill px-5">
+          Contact Us
+        </a>
+      </div>
     </div>
+
+    <!-- RIGHT VIDEO -->
+    <div class="col-lg-6">
+      <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+        <iframe
+          src="https://www.youtube.com/embed/XFV7doKR9MM?autoplay=1&mute=1&controls=0&loop=1&playlist=XFV7doKR9MM"
+          allow="autoplay"
+          style="border:0;">
+        </iframe>
+      </div>
+    </div>
+
   </div>
+</div>
 </section>
-<section id="about" class="py-5 section-dark text-center">
+
+<section id="about" class="py-2 section-dark text-center">
   <div class="container">
     <h2 class="fw-bold neon">About Us</h2>
     <div class="mx-auto my-3" style="width:90px;height:4px;background:#ff9e40;"></div>
-
     <p class="text-secondary mx-auto" style="max-width:900px;">
-      Mirage Reality Labs is an indie game studio focused on building experiences that stay with players long after the screen fades.
-      Our work blends stylized art, immersive atmosphere, experimental mechanics, and thoughtful game design.
-      <br><br>
-      Great games thrive on <span class="neon">strong worlds, emotional impact, and meaningful player discovery</span>.
-      Every title we build on <span class="neon">WebGL, PC, mobile, and VR</span> is guided by this belief.
-      <br><br>
-      As a small, passionate team, we prototype fast, iterate boldly, and push ourselves to create deeply engaging experiences.
+      <span class="neon">Mirage Reality Labs</span> is an <span class="neon">indie game studio</span> focused on building interactive experiences 
+      across games, tools, and creative technology.
+
+      Our work spans <span class="neon">Unity games, WebGL applications, and experimental AI-driven systems.</span>
+      We blend stylized visuals, strong mechanics, and performance-focused development.
+
+      Beyond games, we build practical creative tools and share knowledge through tutorials 
+      and technical videos, contributing to the wider game development community.
     </p>
   </div>
 </section>
-<section id="games" class="py-5 section-darker">
-  <div class="container text-center mb-5">
+
+<section id="games" class="py-3 section-darker">
+  <div class="container text-center mb-3">
     <h2 class="fw-bold neon">Games</h2>
     <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
   </div>
 
+
   <div class="container">
     <div class="row g-4 justify-content-center">
+      <div class="col-md-2" >
+      </div>
 
       <!-- DeepVRse -->
-      <div class="col-md-6">
-        <div class="p-4 rounded-4 bg-card card-hover h-100">
-          <img src="assets/deepvrse_banner.jpg" class="img-fluid rounded mb-3">
+      <div class="col-md-3">
+        <div class="p-3 rounded-4 bg-card card-hover h-100">
+          <img src="assets/deepvrse_banner.jpg" class="img-fluid game-thumb mb-3">
           <h4 class="fw-bold neon">🔥 DeepVRse</h4>
           <p class="text-secondary small">
             Underwater superhero roguelike with tentacle combat, lasers, VR mode, mining drones and base building.
@@ -197,11 +270,12 @@
           </div>
         </div>
       </div>
-
+      <div class="col-md-2" >
+      </div>
       <!-- Seeds of Life -->
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="p-4 rounded-4 bg-card card-hover h-100">
-          <img src="assets/interstellar_cover.jpg" class="img-fluid rounded mb-3">
+          <img src="assets/interstellar_cover.jpg" class="img-fluid game-thumb mb-3">
           <h4 class="fw-bold neon">Seeds of Life</h4>
           <p class="text-secondary small">
             AI-driven interstellar journey simulator with narrative exploration.
@@ -214,10 +288,13 @@
           </a>
         </div>
       </div>
+      <div class="col-md-2" >
+      </div>
 
     </div>
   </div>
 </section>
+
 <section id="assets" class="py-5 section-dark">
   <div class="container text-center mb-5">
     <h2 class="fw-bold neon">Game Assets</h2>
@@ -262,6 +339,64 @@
     </div>
   </div>
 </section>
+
+<section id="tools" class="py-5 section-darker">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold neon">Tools & Apps</h2>
+    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
+  </div>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-6">
+        <div class="p-4 rounded-4 bg-card card-hover h-100">
+          <img src="assets/image_tool_banner.jpg" class="img-fluid rounded mb-3">
+          <h4 class="fw-bold neon">Web Image Cropper</h4>
+          <p class="text-secondary small">
+            A fast browser-based image cropping and grid-slicing tool built in HTML, CSS, and JavaScript.
+            Supports bulk export, custom naming, and precision cropping.
+          </p>
+
+          <a href="https://rahulrkr1996.github.io/SnapGrid/" 
+             target="_blank"
+             class="btn btn-info fw-semibold text-dark">
+             Try the Tool
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="youtube" class="py-5 section-darker text-center">
+  <div class="container">
+    <h2 class="fw-bold neon">YouTube & Tutorials</h2>
+    <p class="text-secondary mb-4">
+      Sharing Unity, AI, and game development techniques through regular videos.
+    </p>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+          <iframe 
+            src="https://www.youtube.com/embed/Dk98lgsAO58"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <a href="https://www.youtube.com/channel/UC_TFhwfuL61PCqtEhhqcFWQ"
+           target="_blank"
+           class="btn btn-info fw-semibold text-dark mt-3">
+           Visit YouTube Channel
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="tech" class="py-5 section-dark text-center">
   <div class="container">
     <h2 class="fw-bold neon">Technologies & Platforms</h2>
@@ -277,49 +412,56 @@
     </div>
   </div>
 </section>
-<section id="reviews" class="py-5 section-dark">
-  <div class="container text-center mb-4">
-    <h2 class="fw-bold neon">Reviews & Feedback</h2>
-    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
-  </div>
+
+<section id="services" class="py-5 section-darker text-center">
+  <h2 class="fw-bold neon">What We Do</h2>
+  <p class="text-secondary mb-5">
+  End-to-end Unity development for indie teams and publishers.
+  </p>
 
   <div class="container">
-    <div class="row g-4 justify-content-center">
+  <div class="row g-4">
 
-      <div class="col-md-5">
-        <div class="p-4 bg-card rounded-4 card-hover h-100">
-          <p class="fst-italic">“Amazing underwater atmosphere and fun rogue mechanics!”</p>
-          <span class="neon fw-bold">– Itch.io Player</span>
-        </div>
-      </div>
-
-      <div class="col-md-5">
-        <div class="p-4 bg-card rounded-4 card-hover h-100">
-          <p class="fst-italic">“The tentacle abilities and VR mode are crazy good!”</p>
-          <span class="neon fw-bold">– Android User</span>
-        </div>
-      </div>
-
+  <div class="col-md-4">
+    <div class="p-4 bg-card rounded-4 card-hover">
+      <h5 class="neon">Unity Gameplay Programming</h5>
     </div>
   </div>
-</section>
-<section id="services" class="py-5 section-darker">
-  <div class="container text-center mb-5">
-    <h2 class="fw-bold neon">Services</h2>
-    <div class="mx-auto mt-2" style="width:90px;height:4px;background:#ff9e40;"></div>
-  </div>
 
-  <div class="container">
-    <div class="row g-4">
-
-      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">Game Development</h5><p class="text-secondary small">Full builds, VR/XR mechanics, prototyping & optimization.</p></div></div>
-      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">3D Art & Assets</h5><p class="text-secondary small">Stylized characters, environments, rigs & materials.</p></div></div>
-      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">AI Integration</h5><p class="text-secondary small">Procedural systems & NPC intelligence.</p></div></div>
-      <div class="col-md-6"><div class="p-4 bg-card rounded-4 card-hover h-100"><h5 class="neon">Tech Consulting</h5><p class="text-secondary small">Performance, pipelines, mobile & VR tuning.</p></div></div>
-
+  <div class="col-md-4">
+    <div class="p-4 bg-card rounded-4 card-hover">
+      <h5 class="neon">VR & Mobile Development</h5>
     </div>
   </div>
+
+  <div class="col-md-4">
+    <div class="p-4 bg-card rounded-4 card-hover">
+      <h5 class="neon">WebGL Optimization</h5>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="p-4 bg-card rounded-4 card-hover">
+      <h5 class="neon">Systems Design</h5>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="p-4 bg-card rounded-4 card-hover">
+      <h5 class="neon">Prototyping & MVPs</h5>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="p-4 bg-card rounded-4 card-hover">
+      <h5 class="neon">Performance Optimization</h5>
+    </div>
+  </div>
+
+  </div>
+  </div>
 </section>
+
 <section id="team" class="py-5 section-dark">
   <div class="container text-center mb-5">
     <h2 class="fw-bold neon">Our Team</h2>
@@ -350,6 +492,53 @@
     </div>
   </div>
 </section>
+<section id="testimonials" class="py-5 section-dark text-center">
+
+<h2 class="fw-bold neon">What People Say</h2>
+
+<div class="container mt-4">
+<div class="row g-4 justify-content-center">
+
+<div class="col-md-5">
+  <div class="p-4 bg-card rounded-4">
+    <p class="fst-italic">
+    “Great Unity developer — delivered on time and optimized for mobile.”
+    </p>
+    <span class="neon fw-bold">— Indie Game Founder</span>
+  </div>
+</div>
+
+<div class="col-md-5">
+  <div class="p-4 bg-card rounded-4">
+    <p class="fst-italic">
+    “Helped us fix performance issues in our WebGL build.”
+    </p>
+    <span class="neon fw-bold">— Solo Developer</span>
+  </div>
+</div>
+
+</div>
+
+<div class="row text-center mt-5 text-white">
+  <div class="col-md-4">
+    <h3>4+</h3>
+    <p>Shipped Projects</p>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Unity + VR</h3>
+    <p>Core Expertise</p>
+  </div>
+
+  <div class="col-md-4">
+    <h3>PC • Mobile • WebGL</h3>
+    <p>Cross-Platform</p>
+  </div>
+</div>
+
+</div>
+</section>
+
 <section id="contact" class="py-5 section-darker text-center">
   <div class="container">
     <h2 class="fw-bold neon">Contact</h2>
