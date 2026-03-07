@@ -1,951 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Portfolio of Rahul Kumar - engineer, AI developer, and game creator. Explore projects, experience, and contact details." />
-<meta name="keywords" content="Rahul Kumar, portfolio, software engineer, AI developer, game developer, Unity, Unreal, machine learning" />
-<meta name="author" content="Rahul Kumar" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://rahulrkr1996.github.io/" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Rahul Kumar - Engineer & Game Developer" />
-<meta property="og:description" content="Portfolio of Rahul Kumar with AI, game development, and engineering projects." />
-<meta property="og:url" content="https://rahulrkr1996.github.io/" />
-<meta property="og:site_name" content="Rahul Kumar Portfolio" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Rahul Kumar — Engineer & Game Developer" />
-<meta name="twitter:description" content="Portfolio of Rahul Kumar with AI, game development, and engineering projects." />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Rahul Kumar",
-  "url": "https://rahulrkr1996.github.io/",
-  "jobTitle": "Engineer & Game Developer",
-  "email": "mailto:Rahul.kumarrkr96@gmail.com",
-  "telephone": "+91-9508799473",
-  "sameAs": [
-    "https://www.linkedin.com/in/rahul-kumar-500027b2/",
-    "https://www.instagram.com/miragegames252/",
-    "https://www.youtube.com/@MirageRealityLabs"
-  ],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "IIT Kharagpur"
-  }
-}
-</script>
-<title>Rahul Kumar — Engineer & Game Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Rahul Kumar — Senior Software Engineer & Indie Game Developer. IIT Kharagpur Alumni."/>
+<title>Rahul Kumar - Engineer & Game Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --bg: #080b10;
-    --bg2: #0d1117;
-    --card: #111820;
-    --border: #1e2d3d;
-    --accent: #00e5ff;
-    --accent2: #7c3aed;
-    --accent3: #f59e0b;
-    --text: #e2e8f0;
-    --muted: #64748b;
-    --glow: 0 0 30px rgba(0,229,255,0.15);
-  }
+:root{
+  --ink:#0a0a0c;
+  --ink2:#111115;
+  --ink3:#18181e;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --gold-dim:rgba(201,168,76,0.12);
+  --silver:#8b8fa8;
+  --pale:#d4d6e0;
+  --white:#f0f0f4;
+  --line:rgba(201,168,76,0.18);
+  --line2:rgba(255,255,255,0.06);
+  --r: 2px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:15px}
+body{
+  background:var(--ink);
+  color:var(--pale);
+  font-family:'Syne',sans-serif;
+  font-weight:400;
+  overflow-x:hidden;
+  min-height:100vh;
+}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+/* ── TEXTURE & ATMOSPHERE ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(201,168,76,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 90%, rgba(100,80,200,0.04) 0%, transparent 60%),
+    repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,0.012) 60px),
+    repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,0.012) 60px);
+  pointer-events:none;z-index:0;
+}
+body::after{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;opacity:.6;
+}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+/* ── SCROLL BAR ── */
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:99px}
 
-  /* NOISE OVERLAY */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.5;
-  }
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 3rem;
+  background:rgba(10,10,12,0.92);
+  backdrop-filter:blur(20px) saturate(120%);
+  border-bottom:1px solid var(--line);
+}
+.nav-mark{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-weight:300;
+  font-size:1.4rem;
+  color:var(--gold);
+  letter-spacing:.06em;
+  text-decoration:none;
+}
+.nav-links{list-style:none;display:flex;gap:2rem;align-items:center}
+.nav-links a{
+  font-family:'DM Mono',monospace;font-size:.68rem;
+  color:var(--silver);letter-spacing:.14em;
+  text-transform:uppercase;text-decoration:none;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-cv{
+  font-family:'DM Mono',monospace;font-size:.68rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  padding:.38rem 1rem;border-radius:var(--r);
+  text-decoration:none;
+  transition:all .2s;
+  display:inline-flex;align-items:center;gap:.35rem;
+}
+.nav-cv:hover{background:var(--gold2);transform:translateY(-1px)}
 
-  /* GRID BG */
-  .grid-bg {
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-    z-index: 0;
-  }
+/* ── HERO ── */
+#hero{
+  position:relative;z-index:1;
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:4rem;
+  padding:9rem 3rem 4rem;
+  max-width:1300px;margin:0 auto;
+}
+.hero-left{}
+.hero-eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:1.6rem;
+  display:flex;align-items:center;gap:.8rem;
+  opacity:0;animation:slideIn .7s .1s forwards;
+}
+.hero-eyebrow::before{
+  content:'';display:block;
+  width:28px;height:1px;background:var(--gold);
+}
+.hero-name{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;line-height:.92;
+  font-size:clamp(4rem,7vw,6.5rem);
+  color:var(--white);
+  letter-spacing:-.02em;
+  opacity:0;animation:slideIn .7s .25s forwards;
+}
+.hero-name em{
+  font-style:italic;color:var(--gold);
+  display:block;font-weight:300;
+}
+.hero-desc{
+  margin-top:1.8rem;
+  font-size:.92rem;line-height:1.8;
+  color:var(--silver);max-width:440px;
+  opacity:0;animation:slideIn .7s .4s forwards;
+}
+.hero-desc strong{color:var(--pale);font-weight:600}
+.hero-actions{
+  display:flex;gap:1rem;margin-top:2.2rem;
+  opacity:0;animation:slideIn .7s .55s forwards;
+}
+.btn-g{
+  background:var(--gold);color:var(--ink);
+  font-family:'DM Mono',monospace;font-size:.75rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.65rem 1.8rem;border-radius:var(--r);
+  text-decoration:none;font-weight:500;
+  transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;
+}
+.btn-g:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.25)}
+.btn-o{
+  border:1px solid var(--line);color:var(--pale);
+  font-family:'DM Mono',monospace;font-size:.75rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.65rem 1.8rem;border-radius:var(--r);
+  text-decoration:none;transition:all .2s;
+}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
 
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem 4rem;
-    background: rgba(8,11,16,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--accent);
-    letter-spacing: 0.05em;
-    text-decoration: none;
-  }
-  nav ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
-  nav ul a {
-    text-decoration: none;
-    color: var(--muted);
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-family: 'JetBrains Mono', monospace;
-    transition: color 0.2s;
-  }
-  nav ul a:hover { color: var(--accent); }
-  .nav-download {
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 0.45rem 1.2rem;
-    border-radius: 3px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8rem;
-    cursor: pointer;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-  .nav-download:hover {
-    background: var(--accent);
-    color: var(--bg);
-  }
+.hero-right{
+  opacity:0;animation:fadeIn .9s .6s forwards;
+  display:flex;flex-direction:column;gap:1px;
+  border:1px solid var(--line);
+  border-radius:4px;overflow:hidden;
+  background:var(--ink2);
+}
+.stat-row{
+  display:grid;grid-template-columns:1fr 1fr;
+}
+.stat-cell{
+  padding:1.6rem 1.8rem;
+  border:1px solid var(--line2);
+  position:relative;
+}
+.stat-cell:hover{background:rgba(201,168,76,.03)}
+.stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:300;
+  color:var(--gold);line-height:1;
+  letter-spacing:-.02em;
+}
+.stat-n sup{font-size:1rem;vertical-align:super;margin-left:.1em}
+.stat-l{
+  font-family:'DM Mono',monospace;
+  font-size:.62rem;letter-spacing:.14em;
+  color:var(--silver);text-transform:uppercase;
+  margin-top:.3rem;
+}
+.badge-iit{
+  display:flex;align-items:center;gap:.8rem;
+  padding:1.2rem 1.8rem;
+  border-top:1px solid var(--line);
+  background:var(--gold-dim);
+}
+.badge-iit-icon{
+  width:32px;height:32px;
+  background:var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;color:var(--ink);font-weight:700;
+  flex-shrink:0;
+}
+.badge-iit-text{font-size:.78rem;color:var(--pale);line-height:1.4}
+.badge-iit-text span{
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  color:var(--gold);letter-spacing:.08em;
+  display:block;margin-top:.15rem;
+}
 
-  /* HERO */
-  #hero {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem 4rem 4rem;
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .hero-glow {
-    position: fixed;
-    width: 700px; height: 700px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,229,255,0.07) 0%, transparent 70%);
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .hero-glow2 {
-    position: fixed;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
-    top: 20%; right: 10%;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .hero-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--accent);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.2s forwards;
-  }
-  .hero-name {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    line-height: 0.95;
-    color: #fff;
-    letter-spacing: -0.03em;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.4s forwards;
-  }
-  .hero-name span { color: var(--accent); display: block; }
-  .hero-tagline {
-    margin-top: 2rem;
-    font-size: 1.15rem;
-    color: var(--muted);
-    max-width: 520px;
-    line-height: 1.7;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.6s forwards;
-  }
-  .hero-tagline strong { color: var(--text); font-weight: 500; }
-  .hero-ctas {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.8s forwards;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: var(--bg);
-    padding: 0.75rem 2rem;
-    border-radius: 3px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .btn-primary:hover {
-    background: #00c4e0;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,229,255,0.3);
-  }
-  .btn-secondary {
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 0.75rem 2rem;
-    border-radius: 3px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-  }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 4rem;
-    opacity: 0;
-    animation: fadeUp 0.8s 1s forwards;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-  }
-  .stat-num {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 2.2rem;
-    color: var(--accent);
-    line-height: 1;
-  }
-  .stat-label {
-    font-size: 0.8rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-family: 'JetBrains Mono', monospace;
-    margin-top: 0.3rem;
-  }
+/* ── SECTION SHELL ── */
+.section-wrap{
+  position:relative;z-index:1;
+  max-width:1300px;margin:0 auto;
+  padding:5rem 3rem;
+}
+.sec-head{
+  display:flex;align-items:center;gap:1.2rem;
+  margin-bottom:3rem;
+}
+.sec-no{
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  color:var(--gold);letter-spacing:.15em;
+}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:400;
+  color:var(--white);letter-spacing:-.01em;
+}
+.sec-rule{flex:1;height:1px;background:var(--line)}
+.divider{
+  position:relative;z-index:1;
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,var(--line) 20%,var(--line) 80%,transparent 100%);
+  max-width:1300px;margin:0 auto;
+}
 
-  /* SECTIONS */
-  section {
-    position: relative;
-    z-index: 1;
-    padding: 6rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 1.5rem;
-    margin-bottom: 3.5rem;
-  }
-  .section-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-  }
-  .section-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 2.4rem;
-    color: #fff;
-    letter-spacing: -0.02em;
-  }
-  .section-line { flex: 1; height: 1px; background: var(--border); }
+/* ── EXPERIENCE ── */
+.exp-container{display:flex;flex-direction:column;gap:0}
+.exp-row{
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:0;
+  border-bottom:1px solid var(--line2);
+  transition:background .2s;
+  position:relative;
+}
+.exp-row:last-child{border-bottom:none}
+.exp-row:hover{background:rgba(201,168,76,.02)}
+.exp-row::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:transparent;transition:background .25s;
+}
+.exp-row:hover::before{background:var(--gold)}
+.exp-sidebar{
+  padding:2rem 2rem 2rem 1.5rem;
+  border-right:1px solid var(--line2);
+  display:flex;flex-direction:column;
+  justify-content:flex-start;gap:.4rem;
+}
+.exp-period{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.1em;
+  color:var(--silver);text-transform:uppercase;line-height:1.5;
+}
+.exp-co{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-weight:500;
+  color:var(--gold);line-height:1.3;
+}
+.exp-geo{
+  font-size:.72rem;color:var(--silver);
+  font-family:'DM Mono',monospace;
+}
+.exp-body{padding:2rem 2rem 2rem 2.5rem}
+.exp-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:400;
+  color:var(--white);margin-bottom:.6rem;letter-spacing:-.01em;
+}
+.exp-chips{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
+.chip{
+  font-family:'DM Mono',monospace;font-size:.62rem;
+  letter-spacing:.06em;
+  padding:.18rem .65rem;border-radius:99px;
+  border:1px solid var(--line);color:var(--silver);
+  background:rgba(255,255,255,.02);
+}
+.chip-h{border-color:rgba(201,168,76,.3);color:rgba(201,168,76,.75);background:rgba(201,168,76,.06)}
+.exp-points{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.exp-points li{
+  font-size:.875rem;color:var(--silver);
+  line-height:1.7;padding-left:1.1rem;position:relative;
+}
+.exp-points li::before{
+  content:'◆';
+  position:absolute;left:0;
+  font-size:.35rem;color:var(--gold);
+  top:.55em;
+}
 
-  /* SKILLS */
-  .skills-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-  .skill-chip {
-    padding: 0.4rem 1rem;
-    border-radius: 2px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    letter-spacing: 0.05em;
-    border: 1px solid;
-    transition: all 0.2s;
-  }
-  .chip-go   { color:#00add8; border-color:rgba(0,173,216,0.3); background:rgba(0,173,216,0.05); }
-  .chip-java { color:#f59e0b; border-color:rgba(245,158,11,0.3); background:rgba(245,158,11,0.05); }
-  .chip-aws  { color:#ff9900; border-color:rgba(255,153,0,0.3);  background:rgba(255,153,0,0.05); }
-  .chip-unity{ color:#c4c4c4; border-color:rgba(196,196,196,0.3);background:rgba(196,196,196,0.05);}
-  .chip-db   { color:#00e5ff; border-color:rgba(0,229,255,0.3);  background:rgba(0,229,255,0.05); }
-  .chip-other{ color:#a78bfa; border-color:rgba(167,139,250,0.3);background:rgba(167,139,250,0.05);}
-  .skill-chip:hover { transform: translateY(-2px); }
+/* ── PROJECTS ── */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line2);
+  border:1px solid var(--line2);
+  border-radius:4px;overflow:hidden;
+}
+.proj-card{
+  background:var(--ink2);
+  padding:2rem 1.8rem;
+  display:flex;flex-direction:column;
+  gap:.7rem;
+  transition:background .2s;
+  position:relative;overflow:hidden;
+}
+.proj-card::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:2px;
+  background:transparent;transition:background .25s;
+}
+.proj-card:hover{background:var(--ink3)}
+.proj-card:hover::after{background:var(--gold)}
+.proj-em{
+  font-size:1.6rem;line-height:1;
+}
+.proj-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:500;color:var(--white);
+  line-height:1.3;
+}
+.proj-desc{
+  font-size:.8rem;color:var(--silver);
+  line-height:1.7;flex:1;
+}
+.proj-links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;padding-top:.5rem}
+.plink{
+  font-family:'DM Mono',monospace;font-size:.62rem;
+  letter-spacing:.06em;color:var(--gold);
+  text-decoration:none;
+  border:1px solid rgba(201,168,76,.25);
+  padding:.2rem .65rem;border-radius:99px;
+  transition:all .15s;
+}
+.plink:hover{background:var(--gold-dim);border-color:var(--gold)}
+.plink-dead{opacity:.35;cursor:default}
 
-  /* EXPERIENCE */
-  .exp-list { display: flex; flex-direction: column; }
-  .exp-item {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2rem;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-  }
-  .exp-item:last-child { border-bottom: none; }
-  .exp-item::before {
-    content: '';
-    position: absolute;
-    left: -4rem; top: 0; bottom: 0;
-    width: 2px;
-    background: transparent;
-    transition: background 0.2s;
-  }
-  .exp-item:hover::before { background: var(--accent); }
-  .exp-date {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    margin-bottom: 0.8rem;
-  }
-  .exp-company {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--accent);
-  }
-  .exp-loc { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
-  .exp-role {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #fff;
-    margin-bottom: 0.4rem;
-  }
-  .exp-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
-  .tech-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 0.2rem 0.6rem;
-    border-radius: 2px;
-  }
-  .exp-bullets { list-style: none; padding: 0; }
-  .exp-bullets li {
-    color: #94a3b8;
-    font-size: 0.93rem;
-    line-height: 1.7;
-    padding: 0.25rem 0 0.25rem 1.2rem;
-    position: relative;
-  }
-  .exp-bullets li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    opacity: 0.6;
-    font-size: 0.8rem;
-  }
+/* ── SKILLS ── */
+.skills-layout{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;
+}
+.skill-group{margin-bottom:2rem}
+.skill-group:last-child{margin-bottom:0}
+.skill-group-label{
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.9rem;
+  padding-bottom:.5rem;border-bottom:1px solid var(--line);
+}
+.chips-row{display:flex;flex-wrap:wrap;gap:.4rem}
+.sk{
+  font-family:'DM Mono',monospace;font-size:.7rem;
+  letter-spacing:.04em;color:var(--pale);
+  padding:.28rem .85rem;border-radius:var(--r);
+  border:1px solid var(--line2);background:var(--ink2);
+  transition:all .15s;cursor:default;
+}
+.sk:hover{border-color:rgba(201,168,76,.4);color:var(--gold);background:var(--gold-dim)}
+.sk-g{border-color:rgba(0,180,180,.2);color:rgba(0,220,220,.7);background:rgba(0,180,180,.04)}
+.sk-j{border-color:rgba(245,180,0,.2);color:rgba(245,200,60,.7);background:rgba(245,180,0,.04)}
+.sk-a{border-color:rgba(255,140,0,.2);color:rgba(255,165,0,.7);background:rgba(255,140,0,.04)}
+.sk-u{border-color:rgba(200,200,200,.15);color:rgba(210,210,210,.7);background:rgba(200,200,200,.03)}
+.sk-p{border-color:rgba(180,100,255,.2);color:rgba(180,130,255,.7);background:rgba(180,100,255,.04)}
 
-  /* PROJECTS */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-  }
-  .project-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2rem;
-    transition: all 0.25s;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .project-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0,229,255,0.03) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .project-card:hover {
-    border-color: rgba(0,229,255,0.3);
-    transform: translateY(-4px);
-    box-shadow: var(--glow);
-  }
-  .project-icon { font-size: 2rem; margin-bottom: 1rem; }
-  .project-name {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-  .project-desc {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-    flex: 1;
-  }
-  .project-links { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: auto; }
-  .project-link {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--accent);
-    text-decoration: none;
-    border: 1px solid rgba(0,229,255,0.2);
-    padding: 0.25rem 0.7rem;
-    border-radius: 2px;
-    transition: all 0.2s;
-    letter-spacing: 0.05em;
-  }
-  .project-link:hover { background: rgba(0,229,255,0.1); }
+/* ── EDUCATION ── */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line2);border:1px solid var(--line2);border-radius:4px;overflow:hidden}
+.edu-card{
+  background:var(--ink2);
+  padding:2.2rem 2rem;
+  position:relative;
+  display:flex;flex-direction:column;gap:.4rem;
+  transition:background .2s;
+}
+.edu-card:hover{background:var(--ink3)}
+.edu-accent{
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--line);transition:background .2s;
+}
+.edu-card:hover .edu-accent{background:var(--gold)}
+.edu-inst{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:500;
+  color:var(--white);line-height:1.3;
+}
+.edu-deg{font-size:.82rem;color:var(--silver);line-height:1.6;margin-top:.2rem}
+.edu-yr{
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  color:var(--gold);letter-spacing:.1em;margin-top:.5rem;
+}
 
-  /* EDUCATION */
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .edu-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .edu-card::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 100%;
-    background: var(--accent);
-  }
-  .edu-institution {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: #fff;
-    margin-bottom: 0.4rem;
-  }
-  .edu-degree { font-size: 0.88rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.5rem; }
-  .edu-date {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: 0.08em;
-  }
+/* ── CONTACT ── */
+#contact-section{
+  position:relative;z-index:1;
+  background:var(--ink2);
+  border-top:1px solid var(--line);
+}
+.contact-inner{
+  max-width:1300px;margin:0 auto;
+  padding:5rem 3rem;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:start;
+}
+.contact-headline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:300;
+  color:var(--white);line-height:1.1;
+  letter-spacing:-.02em;margin-bottom:.8rem;
+}
+.contact-headline em{font-style:italic;color:var(--gold)}
+.contact-sub{font-size:.85rem;color:var(--silver);line-height:1.8;max-width:380px}
+.contact-list{display:flex;flex-direction:column;gap:0}
+.clink{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 0;
+  border-bottom:1px solid var(--line2);
+  text-decoration:none;
+  color:var(--pale);font-size:.85rem;
+  transition:color .2s;
+}
+.clink:last-child{border-bottom:none}
+.clink:hover{color:var(--gold)}
+.clink-ico{
+  width:34px;height:34px;flex-shrink:0;
+  background:var(--ink3);border:1px solid var(--line);
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:.85rem;
+  transition:border-color .2s;
+}
+.clink:hover .clink-ico{border-color:var(--gold)}
+.clink-label{font-size:.7rem;font-family:'DM Mono',monospace;color:var(--silver);display:block;margin-bottom:.15rem;letter-spacing:.08em}
 
-  /* CONTACT FOOTER */
-  #contact {
-    position: relative;
-    z-index: 1;
-    border-top: 1px solid var(--border);
-    background: var(--bg2);
-  }
-  #contact > div {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6rem 4rem;
-  }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .contact-intro {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-  .contact-intro span { color: var(--accent); }
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-  }
-  .contact-detail:hover { color: var(--accent); }
-  .contact-icon {
-    width: 36px; height: 36px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
+/* ── SOCIAL BAR ── */
+.social-bar{
+  position:relative;z-index:1;
+  display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;
+  padding:1.5rem 3rem;
+  border-top:1px solid var(--line2);
+  background:var(--ink2);
+}
+.soc-btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--silver);text-decoration:none;
+  border:1px solid var(--line2);
+  padding:.35rem .9rem;border-radius:99px;
+  transition:all .2s;
+}
+.soc-btn:hover{color:var(--gold);border-color:rgba(201,168,76,.4)}
+.soc-btn svg{flex-shrink:0}
 
-  /* FOOTER */
-  footer {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--border);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--muted);
-  }
-  footer span { color: var(--accent); }
+/* ── FOOTER ── */
+footer{
+  position:relative;z-index:1;
+  text-align:center;padding:1.5rem 2rem;
+  border-top:1px solid var(--line2);
+  background:var(--ink);
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  letter-spacing:.1em;color:var(--silver);
+}
+footer em{color:var(--gold);font-style:normal}
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+/* ── ANIMATIONS ── */
+@keyframes slideIn{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+.reveal.vis{opacity:1;transform:none}
 
-  /* SECTION DIVIDER */
-  .section-divider {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border), transparent);
-    position: relative;
-    z-index: 1;
-  }
-
-  /* SCROLLBAR */
-  ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    /*nav ul { display: none; }*/
-    #hero, section { padding: 5rem 1.5rem 3rem; }
-    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-    .edu-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; gap: 2rem; }
-  }
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:.8rem 1.4rem}
+  .nav-links{display:none}
+  #hero{grid-template-columns:1fr;padding:7rem 1.4rem 3rem}
+  .hero-right{display:none}
+  .section-wrap{padding:3.5rem 1.4rem}
+  .exp-row{grid-template-columns:1fr}
+  .exp-sidebar{border-right:none;border-bottom:1px solid var(--line2);padding:1.5rem 1.4rem}
+  .exp-body{padding:1.5rem 1.4rem}
+  .projects-grid{grid-template-columns:1fr}
+  .skills-layout{grid-template-columns:1fr}
+  .edu-grid{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr;padding:3.5rem 1.4rem}
+}
 </style>
 </head>
 <body>
 
-<div class="grid-bg"></div>
-<div class="hero-glow"></div>
-<div class="hero-glow2"></div>
-
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">RK.</a>
-  <ul>
-    <li><a href="#about">About</a></li>
+  <a href="#hero" class="nav-mark">R. Kumar</a>
+  <ul class="nav-links">
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <!-- ↓ Update the href to match your PDF filename when deploying -->
-    <li><a class="nav-download" href="./Rahul_Kumar_Resume.pdf" download="Rahul_Kumar_Resume.pdf">↓ Download CV</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+    <li><a class="nav-cv" href="./Rahul_Kumar_Resume.pdf" download>↓ CV</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <p class="hero-label">Software Engineer & Indie Game Developer</p>
-  <h1 class="hero-name">
-    Rahul<br/>
-    <span>Kumar</span>
-  </h1>
-  <p class="hero-tagline">
-    <strong>6+ years</strong> building scalable backend systems — from high-throughput loan engines to document pipelines — and founder of <strong>Mirage Reality Labs</strong>, an indie game studio shipped on Android, WebGL &amp; VR.
-  </p>
-  <div class="hero-ctas">
-    <a href="#experience" class="btn-primary">View Experience ↓</a>
-    <a href="https://mirage-reality-labs.vercel.app/" target="_blank" class="btn-secondary">Studio →</a>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Software Engineer &amp; Indie Game Developer</p>
+    <h1 class="hero-name">
+      Rahul<br/>
+      <em>Kumar</em>
+    </h1>
+    <p class="hero-desc">
+      <strong>6+ years</strong> building high-throughput backend systems — loan engines, document pipelines, event-driven architecture — and founder of <strong>Mirage Reality Labs</strong>, an indie game studio shipping on Android, WebGL &amp; VR.
+    </p>
+    <div class="hero-actions">
+      <a href="#experience" class="btn-g">Experience ↓</a>
+      <a href="https://mirage-reality-labs.vercel.app/" target="_blank" class="btn-o">Studio →</a>
+    </div>
   </div>
-  <div class="hero-stats">
-    <div>
-      <div class="stat-num">6+</div>
-      <div class="stat-label">Years Experience</div>
+  <div class="hero-right">
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="stat-n">6<sup>+</sup></div>
+        <div class="stat-l">Years Exp.</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-n">5</div>
+        <div class="stat-l">Companies</div>
+      </div>
     </div>
-    <div>
-      <div class="stat-num">4+</div>
-      <div class="stat-label">Games Released</div>
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="stat-n">4<sup>+</sup></div>
+        <div class="stat-l">Games Released</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-n">1</div>
+        <div class="stat-l">Ai Saas Tool - Artify Studio</div>
+      </div>
     </div>
-    <div>
-      <div class="stat-num">5</div>
-      <div class="stat-label">Companies</div>
-    </div>
-    <div>
-      <div class="stat-num">IIT</div>
-      <div class="stat-label">Kharagpur Alumni</div>
+    <div class="badge-iit">
+      <div class="badge-iit-icon">IIT</div>
+      <div class="badge-iit-text">
+        Indian Institute of Technology, Kharagpur
+        <span>B.Tech + M.Tech · Chemical Engineering · 2014–2019</span>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<div class="divider"></div>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-header reveal">
-    <span class="section-num">01</span>
-    <h2 class="section-title">Experience</h2>
-    <div class="section-line"></div>
+<div id="experience" class="section-wrap">
+  <div class="sec-head reveal">
+    <span class="sec-no">01</span>
+    <h2 class="sec-title">Experience</h2>
+    <div class="sec-rule"></div>
   </div>
 
-  <div class="exp-list">
+  <div class="exp-container">
 
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-date">APR 2025 — PRESENT</div>
-        <div class="exp-company">Mirage Reality Labs</div>
-        <div class="exp-loc">Bengaluru, India</div>
+    <div class="exp-row reveal">
+      <div class="exp-sidebar">
+        <div class="exp-period">Apr 2025 - Present</div>
+        <div class="exp-co">Mirage Reality Labs</div>
+        <div class="exp-geo">Bengaluru, India</div>
       </div>
-      <div>
-        <div class="exp-role">Founder</div>
-        <div class="exp-tech">
-          <span class="tech-tag">Unity 3D</span><span class="tech-tag">C#</span>
-          <span class="tech-tag">Electron.js</span><span class="tech-tag">WebGL</span><span class="tech-tag">Mobile</span>
+      <div class="exp-body">
+        <div class="exp-title">Founder</div>
+        <div class="exp-chips">
+          <span class="chip chip-h">Unity 3D</span><span class="chip chip-h">C#</span>
+          <span class="chip chip-h">Electron.js</span><span class="chip chip-h">WebGL</span><span class="chip">Mobile</span>
         </div>
-        <ul class="exp-bullets">
-          <li>End-to-end product ownership: website, branding, game development, marketing, and publishing.</li>
-          <li>Developed and released two games on Google Play Store & Itch.io; published paid 3D assets on Unity Asset Store.</li>
-          <li>Hands-on in design, Unity development, pipelines, asset creation, and post-launch updates.</li>
+        <ul class="exp-points">
+          <li>Built and launched <strong style="color:var(--pale)">Artify Studio</strong> — a multi-purpose AI design SaaS for generating resumes, websites, cards, and creative assets in-browser.</li>
+          <li>End-to-end ownership: branding, game dev, marketing, and publishing pipelines.</li>
+          <li>Released two games on Google Play &amp; Itch.io; published paid 3D assets on Unity Asset Store.</li>
         </ul>
       </div>
     </div>
 
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-date">OCT 2023 — APR 2025</div>
-        <div class="exp-company">Liftoff LLC</div>
-        <div class="exp-loc">Bengaluru, India</div>
+    <div class="exp-row reveal">
+      <div class="exp-sidebar">
+        <div class="exp-period">Oct 2023 - Apr 2025</div>
+        <div class="exp-co">Liftoff LLC</div>
+        <div class="exp-geo">Bengaluru, India</div>
       </div>
-      <div>
-        <div class="exp-role">Software Consultant</div>
-        <div class="exp-tech">
-          <span class="tech-tag">Golang</span><span class="tech-tag">Java</span>
-          <span class="tech-tag">AWS</span><span class="tech-tag">Kafka</span><span class="tech-tag">PostgreSQL</span>
+      <div class="exp-body">
+        <div class="exp-title">Software Consultant</div>
+        <div class="exp-chips">
+          <span class="chip chip-h">Golang</span><span class="chip chip-h">Java</span>
+          <span class="chip">AWS</span><span class="chip">Kafka</span><span class="chip">PostgreSQL</span>
         </div>
-        <ul class="exp-bullets">
-          <li>Built a fully automated overnight loan-processing engine in Golang, processing thousands of daily loan records without manual intervention.</li>
-          <li>Developed a mass document-generation pipeline outputting 5–10k PDFs/day using parallel Go workers.</li>
-          <li>Implemented a config-driven orchestration layer enabling dynamic API/workflow mapping across different clients — zero code changes required.</li>
-          <li>Delivered scalable backend components for digital mortgage pricing (Java + Go).</li>
+        <ul class="exp-points">
+          <li>Built a fully automated overnight loan-processing engine in Golang, handling thousands of daily records without manual intervention.</li>
+          <li>Developed a mass document-generation pipeline outputting <strong style="color:var(--pale)">5–10k PDFs / day</strong> via parallel Go workers.</li>
+          <li>Implemented a config-driven orchestration layer enabling dynamic API/workflow mapping across clients — zero code changes required.</li>
         </ul>
       </div>
     </div>
 
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-date">SEP 2022 — AUG 2023</div>
-        <div class="exp-company">Halodoc</div>
-        <div class="exp-loc">Bengaluru, India</div>
+    <div class="exp-row reveal">
+      <div class="exp-sidebar">
+        <div class="exp-period">Sep 2022 - Aug 2023</div>
+        <div class="exp-co">Halodoc</div>
+        <div class="exp-geo">Bengaluru, India</div>
       </div>
-      <div>
-        <div class="exp-role">Senior Software Engineer (SDE-2)</div>
-        <div class="exp-tech">
-          <span class="tech-tag">Golang</span><span class="tech-tag">Java</span><span class="tech-tag">Microservices</span>
+      <div class="exp-body">
+        <div class="exp-title">Senior Software Engineer</div>
+        <div class="exp-chips">
+          <span class="chip chip-h">Golang</span><span class="chip chip-h">Java</span><span class="chip">Microservices</span>
         </div>
-        <ul class="exp-bullets">
-          <li>Designed a modular reimbursement claims engine with dynamic rule evaluation — cutting processing latency from minutes to seconds.</li>
-          <li>Delivered a high-volume data ingestion service for partner onboarding handling millions of records (CSV/API).</li>
-          <li>Reduced technical debt via concurrency improvements, caching strategies, and DB tuning across insurance microservices.</li>
+        <ul class="exp-points">
+          <li>Designed a modular reimbursement claims engine with dynamic rule evaluation — cutting latency from minutes to seconds.</li>
+          <li>Delivered a high-volume data ingestion service handling millions of partner records via CSV/API.</li>
+          <li>Reduced technical debt via concurrency improvements, caching, and DB tuning across insurance microservices.</li>
         </ul>
       </div>
     </div>
 
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-date">MAR 2022 — SEP 2022</div>
-        <div class="exp-company">SliceIt Credit</div>
-        <div class="exp-loc">Bengaluru, India</div>
+    <div class="exp-row reveal">
+      <div class="exp-sidebar">
+        <div class="exp-period">Mar 2022 - Sep 2022</div>
+        <div class="exp-co">SliceIt Credit</div>
+        <div class="exp-geo">Bengaluru, India</div>
       </div>
-      <div>
-        <div class="exp-role">Software Engineer</div>
-        <div class="exp-tech">
-          <span class="tech-tag">Golang</span><span class="tech-tag">Java</span>
-          <span class="tech-tag">NodeJS</span><span class="tech-tag">Kafka</span>
+      <div class="exp-body">
+        <div class="exp-title">Software Engineer</div>
+        <div class="exp-chips">
+          <span class="chip chip-h">Golang</span><span class="chip chip-h">Java</span>
+          <span class="chip">Node.js</span><span class="chip">Kafka</span>
         </div>
-        <ul class="exp-bullets">
-          <li>Introduced Kafka into a synchronous order-processing system, shifting critical flows to async event-driven architecture — increasing throughput 2–3× and dramatically reducing peak latency.</li>
-          <li>Built the Early Repayment / Invoice Generation workflow enabling proactive customer payments and reducing operational overhead.</li>
+        <ul class="exp-points">
+          <li>Introduced Kafka into synchronous order-processing, shifting critical flows to async event-driven architecture — increasing throughput <strong style="color:var(--pale)">2–3×</strong>.</li>
+          <li>Built Early Repayment / Invoice Generation workflow enabling proactive payments and reducing operational overhead.</li>
         </ul>
       </div>
     </div>
 
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-date">MAY 2019 — FEB 2022</div>
-        <div class="exp-company">General Electric</div>
-        <div class="exp-loc">Hyderabad, India</div>
+    <div class="exp-row reveal">
+      <div class="exp-sidebar">
+        <div class="exp-period">May 2019 - Feb 2022</div>
+        <div class="exp-co">General Electric</div>
+        <div class="exp-geo">Hyderabad, India</div>
       </div>
-      <div>
-        <div class="exp-role">Software Engineering Specialist</div>
-        <div class="exp-tech">
-          <span class="tech-tag">Golang</span><span class="tech-tag">Java</span><span class="tech-tag">AWS</span>
-          <span class="tech-tag">Cassandra</span><span class="tech-tag">Kafka</span><span class="tech-tag">PostgreSQL</span>
+      <div class="exp-body">
+        <div class="exp-title">Software Engineering Specialist</div>
+        <div class="exp-chips">
+          <span class="chip chip-h">Golang</span><span class="chip chip-h">Java</span>
+          <span class="chip">AWS</span><span class="chip">Cassandra</span><span class="chip">Kafka</span>
         </div>
-        <ul class="exp-bullets">
-          <li>Built a fully autonomous PII/data cleanup system processing ~100 GB/month (peak 752 GB), saving compliance teams hundreds of hours annually.</li>
-          <li>Developed Kafka ingestion and query layers — a Golang ingestor for hot/cold storage into Postgres/Cassandra, plus a Java query app for fast analytical lookups across large datasets.</li>
+        <ul class="exp-points">
+          <li>Built a fully autonomous PII/data cleanup system processing <strong style="color:var(--pale)">~100 GB/month</strong> (peak 752 GB), saving compliance teams hundreds of hours annually.</li>
+          <li>Developed Kafka ingestion + query layers — a Golang ingestor for hot/cold storage and a Java query app for fast analytical lookups.</li>
           <li>Created an AWS Secrets Management library standardising secure credential access across multiple microservices.</li>
         </ul>
       </div>
     </div>
 
   </div>
-</section>
+</div>
 
-<div class="section-divider"></div>
+<div class="divider"></div>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header reveal">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Projects & Games</h2>
-    <div class="section-line"></div>
+<div id="projects" class="section-wrap">
+  <div class="sec-head reveal">
+    <span class="sec-no">02</span>
+    <h2 class="sec-title">Projects &amp; Games</h2>
+    <div class="sec-rule"></div>
   </div>
 
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-icon">🌊</div>
-      <div class="project-name">DeepVRse</div>
-      <div class="project-desc">Underwater superhero roguelike with tentacle combat, lasers, VR mode, mining drones, and base building. Built in Unity — shipped on Android & WebGL.</div>
-      <div class="project-links">
-        <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.DeepVRse" target="_blank" class="project-link">Play Store</a>
-        <a href="https://mirage-reality-labs.itch.io/deepvrse" target="_blank" class="project-link">Itch.io</a>
-        <a href="https://www.youtube.com/watch?v=XFV7doKR9MM" target="_blank" class="project-link">Trailer</a>
+  <div class="projects-grid reveal">
+    <div class="proj-card">
+      <div class="proj-em">✨</div>
+      <div class="proj-name">Artify Studio - AI Design Workspace</div>
+      <div class="proj-desc">Multi-purpose AI design SaaS. Generate resumes, greeting cards, websites, sprite sheets, and QR codes — all in-browser with a workspace library and free tier.</div>
+      <div class="proj-links">
+        <a href="https://mirage-artify-studio.vercel.app/" target="_blank" class="plink">Live App</a>
+        <a href="https://mirage-reality-labs.vercel.app/" target="_blank" class="plink">Studio</a>
       </div>
     </div>
-
-    <div class="project-card reveal">
-      <div class="project-icon">🌱</div>
-      <div class="project-name">Seeds of Life</div>
-      <div class="project-desc">AI-driven planetary terraforming simulation with emergent systems and autonomous ecosystems. Built with experimental gameplay mechanics and WebGL.</div>
-      <div class="project-links">
-        <a href="https://seeds-of-life-coral.vercel.app/" target="_blank" class="project-link">Play WebGL</a>
+    <div class="proj-card">
+      <div class="proj-em">🌊</div>
+      <div class="proj-name">DeepVRse</div>
+      <div class="proj-desc">Underwater superhero roguelike with tentacle combat, lasers, VR mode, mining drones, and base building. Shipped on Android &amp; WebGL.</div>
+      <div class="proj-links">
+        <a href="https://play.google.com/store/apps/details?id=com.MirageRealityLabs.DeepVRse" target="_blank" class="plink">Play Store</a>
+        <a href="https://mirage-reality-labs.itch.io/deepvrse" target="_blank" class="plink">Itch.io</a>
+        <a href="https://www.youtube.com/watch?v=XFV7doKR9MM" target="_blank" class="plink">Trailer</a>
       </div>
     </div>
-
-    <div class="project-card reveal">
-      <div class="project-icon">🚀</div>
-      <div class="project-name">Interstellar Journey Simulator</div>
-      <div class="project-desc">Early narrative exploration prototype created during a game jam. A concept experiment that inspired future studio projects.</div>
-      <div class="project-links">
-        <a href="https://mirage-reality-labs.itch.io/interstellar-journey-simulator" target="_blank" class="project-link">Play Pre-Alpha</a>
+    <div class="proj-card">
+      <div class="proj-em">🌱</div>
+      <div class="proj-name">Seeds of Life</div>
+      <div class="proj-desc">AI-driven planetary terraforming simulation with emergent systems and autonomous ecosystems. Built with experimental mechanics on WebGL.</div>
+      <div class="proj-links">
+        <a href="https://seeds-of-life-coral.vercel.app/" target="_blank" class="plink">Play WebGL</a>
       </div>
     </div>
-
-    <div class="project-card reveal">
-      <div class="project-icon">✂️</div>
-      <div class="project-name">SnapGrid — Web Image Cropper</div>
-      <div class="project-desc">Fast browser-based image cropping and grid-slicing tool. Supports bulk export, custom naming, and precision cropping for spritesheets, UI grids & thumbnails.</div>
-      <div class="project-links">
-        <a href="https://mirage-labs-snap-grid.vercel.app/" target="_blank" class="project-link">Try Tool</a>
+    <div class="proj-card">
+      <div class="proj-em">🚀</div>
+      <div class="proj-name">Interstellar Journey Simulator</div>
+      <div class="proj-desc">Early narrative exploration prototype from a game jam - a concept experiment that inspired future studio projects.</div>
+      <div class="proj-links">
+        <a href="https://mirage-reality-labs.itch.io/interstellar-journey-simulator" target="_blank" class="plink">Pre-Alpha</a>
       </div>
     </div>
-
-    <div class="project-card reveal">
-      <div class="project-icon">🐙</div>
-      <div class="project-name">Cartoon Octopus — Unity Asset</div>
-      <div class="project-desc">Fully rigged, stylized octopus 3D asset optimised for Unity. Published commercially on the Unity Asset Store and Itch.io.</div>
-      <div class="project-links">
-        <a href="https://assetstore.unity.com/packages/3d/characters/creatures/cartoon-octopus-rigged-341500" target="_blank" class="project-link">Unity Store</a>
-        <a href="https://mirage-reality-labs.itch.io/cartoon-octopus-rigged" target="_blank" class="project-link">Itch.io</a>
+    <div class="proj-card">
+      <div class="proj-em">✂️</div>
+      <div class="proj-name">SnapGrid - Web Image Cropper</div>
+      <div class="proj-desc">Fast browser-based image cropping and grid-slicing tool. Bulk export, custom naming, precision cropping for spritesheets and UI grids.</div>
+      <div class="proj-links">
+        <a href="https://mirage-labs-snap-grid.vercel.app/" target="_blank" class="plink">Try Tool</a>
       </div>
     </div>
-
-    <div class="project-card reveal">
-      <div class="project-icon">🔒</div>
-      <div class="project-name">AWS Secrets Management Library</div>
-      <div class="project-desc">Internal Golang library standardising secure credential access via AWS Secrets Manager — adopted across multiple microservices at General Electric.</div>
-      <div class="project-links">
-        <span class="project-link" style="cursor:default;opacity:0.5">Internal Project</span>
+    <div class="proj-card">
+      <div class="proj-em">🐙</div>
+      <div class="proj-name">Cartoon Octopus - Unity Asset</div>
+      <div class="proj-desc">Fully rigged, stylised octopus 3D asset optimised for Unity. Sold commercially on the Unity Asset Store and Itch.io.</div>
+      <div class="proj-links">
+        <a href="https://assetstore.unity.com/packages/3d/characters/creatures/cartoon-octopus-rigged-341500" target="_blank" class="plink">Unity Store</a>
+        <a href="https://mirage-reality-labs.itch.io/cartoon-octopus-rigged" target="_blank" class="plink">Itch.io</a>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="section-divider"></div>
+<div class="divider"></div>
 
 <!-- SKILLS -->
-<section id="skills">
-  <div class="section-header reveal">
-    <span class="section-num">03</span>
-    <h2 class="section-title">Skills & Stack</h2>
-    <div class="section-line"></div>
+<div id="skills" class="section-wrap">
+  <div class="sec-head reveal">
+    <span class="sec-no">03</span>
+    <h2 class="sec-title">Skills &amp; Stack</h2>
+    <div class="sec-rule"></div>
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;" class="reveal">
+  <div class="skills-layout reveal">
     <div>
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;">Languages</h3>
-      <div class="skills-grid" style="margin-bottom:2.5rem;">
-        <span class="skill-chip chip-go">Golang</span>
-        <span class="skill-chip chip-java">Java</span>
-        <span class="skill-chip chip-other">Node.js</span>
-        <span class="skill-chip chip-unity">C#</span>
-        <span class="skill-chip chip-other">JavaScript</span>
-        <span class="skill-chip chip-other">Bash / Shell</span>
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="chips-row">
+          <span class="sk sk-g">Golang</span><span class="sk sk-j">Java</span>
+          <span class="sk sk-p">Node.js</span><span class="sk sk-u">C#</span>
+          <span class="sk sk-p">JavaScript</span><span class="sk">Bash / Shell</span>
+        </div>
       </div>
-
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;">AWS</h3>
-      <div class="skills-grid" style="margin-bottom:2.5rem;">
-        <span class="skill-chip chip-aws">S3</span>
-        <span class="skill-chip chip-aws">EC2</span>
-        <span class="skill-chip chip-aws">Lambda</span>
-        <span class="skill-chip chip-aws">Aurora</span>
-        <span class="skill-chip chip-aws">EMR</span>
-        <span class="skill-chip chip-aws">Kinesis</span>
-        <span class="skill-chip chip-aws">SSM</span>
+      <div class="skill-group">
+        <div class="skill-group-label">AWS</div>
+        <div class="chips-row">
+          <span class="sk sk-a">S3</span><span class="sk sk-a">EC2</span>
+          <span class="sk sk-a">Lambda</span><span class="sk sk-a">Aurora</span>
+          <span class="sk sk-a">EMR</span><span class="sk sk-a">Kinesis</span><span class="sk sk-a">SSM</span>
+        </div>
       </div>
-
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;">Databases & Streaming</h3>
-      <div class="skills-grid">
-        <span class="skill-chip chip-db">PostgreSQL</span>
-        <span class="skill-chip chip-db">Apache Kafka</span>
-        <span class="skill-chip chip-db">Cassandra</span>
-        <span class="skill-chip chip-db">Elasticsearch</span>
-        <span class="skill-chip chip-db">Hadoop</span>
-        <span class="skill-chip chip-db">Spark</span>
+      <div class="skill-group">
+        <div class="skill-group-label">Databases &amp; Streaming</div>
+        <div class="chips-row">
+          <span class="sk sk-g">PostgreSQL</span><span class="sk sk-g">Apache Kafka</span>
+          <span class="sk sk-g">Cassandra</span><span class="sk sk-g">Elasticsearch</span>
+          <span class="sk sk-g">Hadoop</span><span class="sk sk-g">Spark</span>
+        </div>
       </div>
     </div>
-
     <div>
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;">Game Dev</h3>
-      <div class="skills-grid" style="margin-bottom:2.5rem;">
-        <span class="skill-chip chip-unity">Unity 3D</span>
-        <span class="skill-chip chip-unity">WebGL</span>
-        <span class="skill-chip chip-unity">VR Development</span>
-        <span class="skill-chip chip-unity">Blender</span>
-        <span class="skill-chip chip-unity">Adobe Photoshop</span>
+      <div class="skill-group">
+        <div class="skill-group-label">Game Dev</div>
+        <div class="chips-row">
+          <span class="sk sk-u">Unity 3D</span><span class="sk sk-u">WebGL</span>
+          <span class="sk sk-u">VR Development</span><span class="sk sk-u">Blender</span>
+          <span class="sk sk-u">Photoshop</span>
+        </div>
       </div>
-
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;">Frontend</h3>
-      <div class="skills-grid" style="margin-bottom:2.5rem;">
-        <span class="skill-chip chip-other">HTML / CSS</span>
-        <span class="skill-chip chip-other">Vue.js</span>
-        <span class="skill-chip chip-other">AngularJS</span>
-        <span class="skill-chip chip-other">Bootstrap</span>
-        <span class="skill-chip chip-other">Electron.js</span>
+      <div class="skill-group">
+        <div class="skill-group-label">Frontend</div>
+        <div class="chips-row">
+          <span class="sk sk-p">HTML / CSS</span><span class="sk sk-p">Vue.js</span>
+          <span class="sk sk-p">AngularJS</span><span class="sk sk-p">Bootstrap</span>
+          <span class="sk sk-p">Electron.js</span>
+        </div>
       </div>
-
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;">Tooling & Observability</h3>
-      <div class="skills-grid">
-        <span class="skill-chip chip-other">GitHub</span>
-        <span class="skill-chip chip-other">Jenkins</span>
-        <span class="skill-chip chip-other">Splunk / Kibana</span>
-        <span class="skill-chip chip-other">AppDynamics</span>
+      <div class="skill-group">
+        <div class="skill-group-label">Tooling &amp; Observability</div>
+        <div class="chips-row">
+          <span class="sk">GitHub</span><span class="sk">Jenkins</span>
+          <span class="sk">Splunk / Kibana</span><span class="sk">AppDynamics</span>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="section-divider"></div>
+<div class="divider"></div>
 
 <!-- EDUCATION -->
-<section id="about">
-  <div class="section-header reveal">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Education</h2>
-    <div class="section-line"></div>
+<div id="about" class="section-wrap">
+  <div class="sec-head reveal">
+    <span class="sec-no">04</span>
+    <h2 class="sec-title">Education</h2>
+    <div class="sec-rule"></div>
   </div>
-
   <div class="edu-grid reveal">
     <div class="edu-card">
-      <div class="edu-institution">Indian Institute of Technology, Kharagpur</div>
-      <div class="edu-degree">Dual Degree — B.Tech + M.Tech<br/>Department of Chemical Engineering</div>
-      <div class="edu-date">2014 — 2019</div>
+      <div class="edu-inst">Indian Institute of Technology, Kharagpur</div>
+      <div class="edu-deg">Dual Degree — B.Tech + M.Tech<br/>Department of Chemical Engineering</div>
+      <div class="edu-yr">2014 — 2019</div>
+      <div class="edu-accent"></div>
     </div>
     <div class="edu-card">
-      <div class="edu-institution">Delhi Public School, Bokaro Steel City</div>
-      <div class="edu-degree">All India CBSE Board — Class XII<br/>Science & Technology — 10 CGPA</div>
-      <div class="edu-date">2000 — 2014</div>
+      <div class="edu-inst">Delhi Public School, Bokaro Steel City</div>
+      <div class="edu-deg">All India CBSE Board — Class XII<br/>Science &amp; Technology · 10 CGPA</div>
+      <div class="edu-yr">2000 — 2014</div>
+      <div class="edu-accent"></div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="section-divider"></div>
+<div class="divider"></div>
 
 <!-- CONTACT -->
-<div id="contact">
-  <div>
-    <div class="section-header reveal">
-      <span class="section-num">05</span>
-      <h2 class="section-title">Get in Touch</h2>
-      <div class="section-line"></div>
+<div id="contact-section">
+  <div class="contact-inner">
+    <div class="reveal">
+      <p class="contact-headline">Let's build<br/><em>together.</em></p>
+      <p class="contact-sub">Open to senior backend roles, game development collaborations, Unity consulting, and interesting product challenges.</p>
     </div>
-
-    <div class="contact-grid">
-      <div class="reveal">
-        <p class="contact-intro">Let's build something<br/><span>great together.</span></p>
-        <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">Open to senior backend roles, game development collaborations, Unity consulting, and interesting product challenges.</p>
-      </div>
-
-      <div class="reveal">
-        <a href="mailto:Rahul.kumarrkr96@gmail.com" class="contact-detail">
-          <div class="contact-icon">✉</div>Rahul.kumarrkr96@gmail.com
+    <div class="reveal">
+      <div class="contact-list">
+        <a href="mailto:Rahul.kumarrkr96@gmail.com" class="clink">
+          <div class="clink-ico">✉</div>
+          <div><span class="clink-label">Email</span>Rahul.kumarrkr96@gmail.com</div>
         </a>
-        <a href="tel:+919508799473" class="contact-detail">
-          <div class="contact-icon">📞</div>+91-9508799473
+        <a href="tel:+919508799473" class="clink">
+          <div class="clink-ico">📞</div>
+          <div><span class="clink-label">Phone</span>+91-9508799473</div>
         </a>
-        <a href="https://mirage-reality-labs.vercel.app/" target="_blank" class="contact-detail">
-          <div class="contact-icon">🎮</div>Mirage Reality Labs Studio
+        <a href="https://mirage-reality-labs.vercel.app/" target="_blank" class="clink">
+          <div class="clink-ico">🎮</div>
+          <div><span class="clink-label">Studio</span>Mirage Reality Labs</div>
         </a>
-        <a href="https://www.youtube.com/@MirageRealityLabs" target="_blank" class="contact-detail">
-          <div class="contact-icon">▶</div>YouTube — Dev & AI Channel
+        <a href="https://www.youtube.com/@MirageRealityLabs" target="_blank" class="clink">
+          <div class="clink-ico">▶</div>
+          <div><span class="clink-label">YouTube</span>@MirageRealityLabs</div>
         </a>
-        <a href="https://www.linkedin.com/in/rahul-kumar-500027b2/" target="_blank" class="contact-detail">
-          <div class="contact-icon">in</div>linkedin.com/in/rahul-kumar
+        <a href="https://www.linkedin.com/in/rahul-kumar-500027b2/" target="_blank" class="clink">
+          <div class="clink-ico" style="font-family:'Syne',sans-serif;font-size:.65rem;font-weight:700">in</div>
+          <div><span class="clink-label">LinkedIn</span>linkedin.com/in/rahul-kumar-500027b2</div>
         </a>
-        <a href="https://www.instagram.com/miragegames252/" target="_blank" class="contact-detail">
-          <div class="contact-icon">◎</div>Instagram — @miragegames252
+        <a href="https://www.instagram.com/miragegames252/" target="_blank" class="clink">
+          <div class="clink-ico">◎</div>
+          <div><span class="clink-label">Instagram</span>@miragegames252</div>
         </a>
       </div>
     </div>
@@ -953,54 +868,58 @@
 </div>
 
 <!-- SOCIAL BAR -->
-  <div style="position:relative;z-index:1;display:flex;justify-content:center;gap:1.5rem;padding:1.5rem 2rem 0;flex-wrap:wrap;">
-    <a href="https://www.linkedin.com/in/rahul-kumar-500027b2/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:0.4rem 1rem;border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      LinkedIn
-    </a>
-    <a href="mailto:Rahul.kumarrkr96@gmail.com" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:0.4rem 1rem;border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-      Gmail
-    </a>
-    <a href="https://www.youtube.com/@MirageRealityLabs" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:0.4rem 1rem;border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#080b10"/></svg>
-      YouTube
-    </a>
-    <a href="https://www.instagram.com/miragegames252/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:0.4rem 1rem;border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      Instagram
-    </a>
-  </div>
+<div class="social-bar">
+  <a href="https://www.linkedin.com/in/rahul-kumar-500027b2/" target="_blank" class="soc-btn">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+  <a href="mailto:Rahul.kumarrkr96@gmail.com" class="soc-btn">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+    Email
+  </a>
+  <a href="https://www.youtube.com/@MirageRealityLabs" target="_blank" class="soc-btn">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#0a0a0c"/></svg>
+    YouTube
+  </a>
+  <a href="https://www.instagram.com/miragegames252/" target="_blank" class="soc-btn">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    Instagram
+  </a>
+  <a href="https://mirage-reality-labs.itch.io/" target="_blank" class="soc-btn">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3.13 1.338C2.08 1.96.02 4.328 0 6.68v1.2c0 1.54.76 2.9 2 3.747v.013c0 .013 0 .013 0 0a4.51 4.51 0 0 0 2.508.76c1.44 0 2.76-.67 3.62-1.72a4.535 4.535 0 0 0 3.62 1.72c1.44 0 2.76-.67 3.62-1.72a4.535 4.535 0 0 0 3.62 1.72 4.51 4.51 0 0 0 2.508-.76v-.013c1.24-.84 2-2.2 2-3.747V6.68c-.02-2.353-2.08-4.72-3.13-5.342C18.935.4 15.467 0 12 0S5.065.4 3.13 1.338zm15.87 9.76a2.54 2.54 0 0 1-1.74.7 2.565 2.565 0 0 1-2.56-2.545 2.565 2.565 0 0 1-2.56 2.545 2.565 2.565 0 0 1-2.56-2.545 2.565 2.565 0 0 1-2.56 2.545 2.54 2.54 0 0 1-1.74-.7v5.58c0 2.4 1.066 3.322 3.48 3.322h8.76c2.413 0 3.48-.922 3.48-3.322V11.1z"/></svg>
+    Itch.io
+  </a>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  Designed &amp; built by <span>Rahul Kumar</span> — IIT Kharagpur Alumnus &amp; Founder of Mirage Reality Labs
+  Designed &amp; built by <em>Rahul Kumar</em> — IIT Kharagpur Alumnus &amp; Founder of Mirage Reality Labs
 </footer>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal'));
-        const idx = siblings.indexOf(entry.target);
-        setTimeout(() => entry.target.classList.add('visible'), idx * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Active nav highlight on scroll
-  const sections = document.querySelectorAll('section[id], div[id]');
-  const navLinks = document.querySelectorAll('nav ul a:not(.nav-download)');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) current = s.id; });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
-    });
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const siblings=[...e.target.parentElement.querySelectorAll('.reveal')];
+      const i=siblings.indexOf(e.target);
+      setTimeout(()=>e.target.classList.add('vis'),i*70);
+      obs.unobserve(e.target);
+    }
   });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Active nav
+const sects=document.querySelectorAll('[id]');
+const nls=document.querySelectorAll('.nav-links a:not(.nav-cv)');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sects.forEach(s=>{if(window.scrollY>=s.offsetTop-180)cur=s.id});
+  nls.forEach(a=>{
+    const match=a.getAttribute('href')==='#'+cur;
+    a.style.color=match?'var(--gold)':'';
+  });
+},{passive:true});
 </script>
 </body>
 </html>
