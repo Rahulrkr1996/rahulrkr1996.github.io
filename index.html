@@ -13,6 +13,7 @@
 
 <style>
 :root {
+  --white:   #ffffff;	
   --slate:   #080e1a;
   --slate2:  #0b1220;
   --slate3:  #0f1829;
@@ -84,10 +85,10 @@ nav.scrolled{background:rgba(8,14,26,.94);backdrop-filter:blur(24px) saturate(18
 .nav-logo{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--ice);text-decoration:none;letter-spacing:-.01em}
 .nav-logo em{font-style:italic;color:var(--blue);text-shadow:var(--glow-b)}
 .nav-links{list-style:none;display:flex;gap:2.2rem;align-items:center}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--ice4);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:color .25s}
+.nav-links a{font-family:'Playfair Display',monospace;font-size:.9rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:color .25s}
 .nav-links a:hover{color:var(--ice)}
 .nav-links a.active{color:var(--blue)}
-.nav-cv{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);background:var(--blue);padding:.45rem 1.2rem;text-decoration:none;transition:background .25s,transform .25s;box-shadow:0 4px 20px rgba(43,127,255,.3)}
+.nav-cv{color: var(--gold);font-family:'JetBrains Mono',monospace;background:var(--blue);padding:.45rem 1.2rem;text-decoration:none;transition:background .25s,transform .25s;box-shadow:0 4px 20px rgba(43,127,255,.3)}
 .nav-cv:hover{background:var(--steel);transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:none;background:none;border:none;padding:.4rem}
 .hamburger span{display:block;width:22px;height:1px;background:var(--blue);transition:all .3s}
@@ -122,7 +123,7 @@ nav.scrolled{background:rgba(8,14,26,.94);backdrop-filter:blur(24px) saturate(18
 .hero-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;opacity:0;animation:slideUp .7s 2.1s var(--ease) forwards}
 .hero-label::before{content:'';width:32px;height:1px;background:var(--steel)}
 
-.hero-name{font-family:'DM Serif Display',serif;font-size:clamp(5rem,12vw,12rem);line-height:.85;letter-spacing:-.03em;color:var(--ice);overflow:hidden}
+.hero-name{font-family:'DM Serif Display',serif;font-size:clamp(2.5rem,5vw,6rem);line-height:.85;letter-spacing:-.03em;color:var(--ice);overflow:hidden}
 .hero-name .row{display:block;overflow:hidden}
 .hero-name .char{display:inline-block;transform:translateY(115%);animation:charUp .8s var(--ease) forwards}
 .hero-name em{font-style:italic;color:var(--blue);text-shadow:var(--glow-b)}
@@ -138,7 +139,7 @@ nav.scrolled{background:rgba(8,14,26,.94);backdrop-filter:blur(24px) saturate(18
 }
 .hero-tagline{font-family:'DM Serif Text',serif;font-style:italic;font-size:clamp(1rem,1.8vw,1.35rem);color:var(--ice2);line-height:1.55}
 .hero-tagline em{font-style:italic;color:var(--gold);text-shadow:var(--glow-g)}
-.hero-desc{font-size:clamp(.8rem,1.2vw,.88rem);color:var(--ice3);line-height:1.95}
+.hero-desc{font-size:clamp(.8rem,1.2vw,.88rem);color:var(--ice3);line-height:2.0}
 .hero-desc strong{color:var(--ice2);font-weight:600}
 
 /* ── HERO LINKS SHOWCASE ── */
@@ -525,6 +526,10 @@ footer em{color:var(--gold);font-style:normal}
 
 <!-- ══════ HERO ══════ -->
 <section id="hero">
+  <h1 class="hero-name" id="heroName">
+    <span class="row" id="row1"></span>
+    <span class="row" id="row2"></span>
+  </h1>
   <div class="hero-label">
     <span>Software Engineer</span>
     <span style="color:var(--ice4)">·</span>
@@ -532,12 +537,6 @@ footer em{color:var(--gold);font-style:normal}
     <span style="color:var(--ice4)">·</span>
     <span>IIT Kharagpur</span>
   </div>
-
-  <h1 class="hero-name" id="heroName">
-    <span class="row" id="row1"></span>
-    <span class="row" id="row2"></span>
-  </h1>
-
   <div class="hero-bottom">
     <div class="hero-tagline">
       Backend systems that scale.<br/>
@@ -992,16 +991,37 @@ const lt=setInterval(()=>{
 
 /* HERO CHARS */
 function initHero(){
-  const rows=[['R','a','h','u','l'],['K','u','m','a','r']];
-  const delays=[[2.0,2.08,2.16,2.24,2.32],[2.1,2.18,2.26,2.34,2.42]];
-  rows.forEach((chars,ri)=>{
-    const el=document.getElementById('row'+(ri+1));
-    chars.forEach((ch,ci)=>{
-      const sp=document.createElement('span');sp.className='char';sp.textContent=ch;sp.style.animationDelay=delays[ri][ci]+'s';
-      if(ri===1&&ci===0){sp.style.fontStyle='italic';sp.style.color='var(--blue)';sp.style.textShadow='var(--glow-b)';}
-      el.appendChild(sp);
-      if(ci<chars.length-1){const g=document.createElement('span');g.style.display='inline-block';g.style.width='0.06em';el.appendChild(g);}
-    });
+  const chars = ['R','a','h','u','l','_','K','u','m','a','r'];
+  const delays = [2.0,2.08,2.16,2.24,2.32,2.36,2.4,2.48,2.56,2.64,2.72];
+
+  const el = document.getElementById('row1');
+
+  chars.forEach((ch, ci) => {
+    const sp = document.createElement('span');
+    sp.className = 'char';
+    sp.textContent = ch;
+    sp.style.animationDelay = delays[ci] + 's';
+
+    // hide underscore
+    if (ch === '_') {
+      sp.style.opacity = '0';
+    }
+
+    // style "K"
+    if (ch === 'K') {
+      sp.style.fontStyle = 'italic';
+      sp.style.color = 'var(--blue)';
+      sp.style.textShadow = 'var(--glow-b)';
+    }
+
+    el.appendChild(sp);
+
+    if (ci < chars.length - 1 && ch !== ' ') {
+      const g = document.createElement('span');
+      g.style.display = 'inline-block';
+      g.style.width = '0.06em';
+      el.appendChild(g);
+    }
   });
 }
 
