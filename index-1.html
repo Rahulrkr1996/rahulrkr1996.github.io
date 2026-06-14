@@ -232,7 +232,7 @@ a { text-decoration: none; color: inherit; }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
-  background: rgba(255,255,255,.3); border: 1px solid rgba(255,255,255,.4);
+  background: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.4);
   backdrop-filter: blur(10px);
 }
 .ping-wrap { position: relative; width: 10px; height: 10px; flex-shrink: 0; }
@@ -387,6 +387,7 @@ a { text-decoration: none; color: inherit; }
 }
 .product-visual .aspect-video { aspect-ratio: 16/9; border-radius: 1rem; overflow: hidden; padding: 12px; }
 .product-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: .75rem; }
+.product-thumbs-1 { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-top: 100px; }
 .product-thumbs { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 10px; }
 .product-thumbs > div { aspect-ratio: 1; border-radius: .75rem; overflow: hidden; padding: 4px; }
 .product-thumbs img { width: 100%; height: 100%; object-fit: cover; border-radius: .5rem; }
@@ -835,7 +836,7 @@ a { text-decoration: none; color: inherit; }
           <div class="ping-wrap"><span class="ping-ring"></span><span class="ping-dot"></span></div>
           <span class="badge-text">Founder @ Rachna AI &amp; Mirage Labs</span>
         </div>
-        <span class="hero-role reveal" style="transition-delay:60ms">Founder · AI Product Engineer · Builder</span>
+        <!-- <span class="hero-role reveal" style="transition-delay:60ms">Founder · AI Product Engineer · Builder</span> -->
         <h1 class="hero-title reveal" style="transition-delay:120ms">
           Rahul Kumar.
           <span class="accent">Architecting the<br>Intelligence Layer.</span>
@@ -959,8 +960,8 @@ a { text-decoration: none; color: inherit; }
 <section class="section-v" id="portfolio" style="padding-top:0">
   <div class="container">
     <div class="portfolio-section-header reveal">
-      <span class="eyebrow">Selected Work</span>
-      <h2 class="section-title">Products &amp; <em>Ventures</em></h2>
+      <span class="eyebrow">Live Products &amp; Ventures</span>
+      <h2 class="section-title">What I've <em>Built &amp; Shipped</em></h2>
       <p>Live products shipped from zero — spanning generative AI, developer tooling, mobile campaigns, and immersive XR gaming.</p>
     </div>
 
@@ -974,9 +975,9 @@ a { text-decoration: none; color: inherit; }
               <img src="https://lh3.googleusercontent.com/aida/AP1WRLvIRr87iLKvp4N651TKBr4sGCKo-Hn6rc5NU8JYz9PxupPMaj7HpnW7S_YyYTTnort8CN96EH8vnRjZvTlw46AypWwuGs0Sw2CF0pgP215p2pGkZ9UFAZo6gfSDxvT7QeVqeJnQpvUa0RaKj6dalfsViplcRnADHLNlB7rgT0IrDykMNk4LPY3FGiTYr4_SMzxokWl9lNh-pC3flTGvFwqQ8Vk_xK31lFRhi-EOH90uHrcq05vguq1eog" alt="Rachna AI">
             </div>
             <div class="product-thumbs">
-              <div class="silk-pressed"><img src="https://lh3.googleusercontent.com/aida/AP1WRLsIufWa3jxsaOEr6lM6Rzp6FolXRo2xIarcmPLLRkKyM1j5ZlPlLnr186FEpSmxtLgztviXSYRA1bk3uKCRLY6Mhq5tfRnBXoZyz8bVx0r0jITQI7D9MEaNRTzA-u2TN-p88s7R4NMnzNUWM_JmqfwOgJJDU6JrCgcHIUvWJOInOLrLFY39CZKnEyJGWHxn0ZmyUZTHR7u86Y7ygbS5EiTQo3FMSywUYB4nnBODSKZpBzU25UIQGS7eew" alt=""></div>
-              <div class="silk-pressed"><img src="https://lh3.googleusercontent.com/aida/AP1WRLtMigmwCRCCUCBXSwOwOzWQ3UXbwQT9717jKwyM2rzY6U-NICnceA-WP-shwlfA7JtehI-ktovwKd2eC08OerQICRggJfYM5F9ZzuVmyHb_ZDFfamzGCtj2IE664K8EPEegZD0YbfvDYIkV5lY8cVt2Rn0km-4CRCOB5PosVNna22tltZxMCigOe_AKpuMHyjHZYWesmGumIkAuwTh5adfAh4JhSeDDzc0miSfd2U0wzkwTk7ITPGhYpw" alt=""></div>
-              <div class="silk-pressed"><img src="https://lh3.googleusercontent.com/aida/AP1WRLuWB5V4QT25stHMF1F9QeU1uugVIZu2n7EjBdc7pJxirQI92O9DVMt6a1qpDd6zAjDh3nFnvlX9F3P-_2yz1yN80VCLagnSRFQgRmx6LEvFZ77u9w7m2Ae1DrdTUqy9iKOxGuoFcV_-jylQWwj0qZX0Zyb8wXzenJPiMY0gDmSJFoWXWI1LDxidGOCmcLuyJIGgQ8W7DiSBY6X9EbknUrwAMCOtuuxHUEKqmz1x8APH5MzWmUe8kTyVXQ" alt=""></div>
+              <div class="silk-pressed"><img src="/assets/banners/resume.png" alt=""></div>
+              <div class="silk-pressed"><img src="/assets/banners/abhinandan_banner.png" alt=""></div>
+              <div class="silk-pressed"><img src="/assets/banners/aamantran_banner.png" alt=""></div>
             </div>
           </div>
           <div class="product-info">
@@ -986,6 +987,16 @@ a { text-decoration: none; color: inherit; }
             <a href="https://www.rachna-ai.in" target="_blank" rel="noopener" class="product-link silk-btn" style="border-radius:.75rem">
               Visit Rachna AI <span class="material-symbols-outlined" style="font-size:15px">open_in_new</span>
             </a>
+            <div class="product-thumbs-1">
+              <div class="silk-pressed"><img src="/assets/banners/niyukti_banner.png" alt=""></div>
+              <div class="silk-pressed"><img src="/assets/banners/prachaar_banner.png" alt=""></div>
+              <a href="https://www.rachna-ai.in" target="_blank" rel="noopener" class="product-link silk-btn" style="border-radius:.75rem">
+                Visit Prachaar Saathi<span class="material-symbols-outlined" style="font-size:15px">open_in_new</span>
+              </a>
+              <a href="https://www.rachna-ai.in" target="_blank" rel="noopener" class="product-link silk-btn" style="border-radius:.75rem">
+                Visit Niyukti Platform<span class="material-symbols-outlined" style="font-size:15px">open_in_new</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1025,57 +1036,6 @@ a { text-decoration: none; color: inherit; }
           </div>
         </div>
       </div>
-
-      <!-- Prachaar Saathi -->
-      <div class="product-card silk-card reveal">
-        <div class="prachaar-grid">
-          <div class="product-info">
-            <span class="product-tag">AI Mobile App / Campaign Intelligence</span>
-            <h3 class="product-title">Prachaar Saathi</h3>
-            <p class="product-desc">AI-powered political campaign management app — targeting voters across WhatsApp, SMS, and calling channels. Smart scheduling, sentiment analysis, and real-time reach dashboards built for grassroots campaigning in India.</p>
-            <a href="#" class="product-link silk-btn" style="border-radius:.75rem">
-              Learn More <span class="material-symbols-outlined" style="font-size:15px">campaign</span>
-            </a>
-          </div>
-          <div class="product-visual">
-            <div class="prachaar-mockup silk-pressed">
-              <div class="prachaar-header">
-                <span class="prachaar-brand">Prachaar Saathi</span>
-                <span class="prachaar-status">
-                  <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
-                  Live
-                </span>
-              </div>
-              <div class="prachaar-channels">
-                <div class="prachaar-ch active">
-                  <div class="ch-icon" style="background:rgba(37,211,102,.15)">📱</div>
-                  <span class="ch-label">WhatsApp</span>
-                  <div class="ch-bar"><div class="ch-fill" style="width:82%"></div></div>
-                  <span style="font-family:var(--ff-mono);font-size:9px;color:rgba(165,180,252,.7)">82%</span>
-                </div>
-                <div class="prachaar-ch">
-                  <div class="ch-icon" style="background:rgba(99,102,241,.15)">💬</div>
-                  <span class="ch-label">SMS Blast</span>
-                  <div class="ch-bar"><div class="ch-fill" style="width:64%;animation-delay:.3s"></div></div>
-                  <span style="font-family:var(--ff-mono);font-size:9px;color:rgba(165,180,252,.7)">64%</span>
-                </div>
-                <div class="prachaar-ch">
-                  <div class="ch-icon" style="background:rgba(251,146,60,.15)">📞</div>
-                  <span class="ch-label">Voice Call</span>
-                  <div class="ch-bar"><div class="ch-fill" style="width:47%;animation-delay:.6s"></div></div>
-                  <span style="font-family:var(--ff-mono);font-size:9px;color:rgba(165,180,252,.7)">47%</span>
-                </div>
-              </div>
-              <div class="prachaar-footer">
-                <span class="pf-tag">AI Scheduling</span>
-                <span class="pf-tag">Sentiment</span>
-                <span class="pf-tag">Real-time</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div><!-- /products-stack -->
   </div>
 </section>
@@ -1302,7 +1262,7 @@ a { text-decoration: none; color: inherit; }
   </div>
 </section>
 
-<!-- ══════════════════════════════════════ DEVLOGS — Updated -->
+<!-- ══════════════════════════════════════ DEVLOGS -->
 <section class="section-v" id="content">
   <div class="container">
     <div class="devlogs-header reveal">
@@ -1312,7 +1272,6 @@ a { text-decoration: none; color: inherit; }
     </div>
     <div class="devlogs-grid">
 
-      <!-- Video 1: DeepVRse Cinematic Reveal -->
       <a href="https://www.youtube.com/watch?v=XFV7doKR9MM" target="_blank" rel="noopener" class="devlog-card silk-card reveal">
         <div class="devlog-thumb">
           <img src="https://i.ytimg.com/vi/XFV7doKR9MM/maxresdefault.jpg" alt="DeepVRse Cinematic Reveal Trailer"
@@ -1328,7 +1287,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </a>
 
-      <!-- Video 2: Official Gameplay Trailer -->
       <a href="https://www.youtube.com/watch?v=YJCWuFLRK8I" target="_blank" rel="noopener" class="devlog-card silk-card reveal" style="transition-delay:80ms">
         <div class="devlog-thumb">
           <img src="https://i.ytimg.com/vi/YJCWuFLRK8I/maxresdefault.jpg" alt="DeepVRse Official Gameplay Trailer"
@@ -1344,7 +1302,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </a>
 
-      <!-- Video 3: Nature vs Machine -->
       <a href="https://www.youtube.com/watch?v=R4cbfipxBHs" target="_blank" rel="noopener" class="devlog-card silk-card reveal" style="transition-delay:160ms">
         <div class="devlog-thumb">
           <img src="https://i.ytimg.com/vi/R4cbfipxBHs/maxresdefault.jpg" alt="Nature vs Machine"
@@ -1360,7 +1317,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </a>
 
-      <!-- Video 4: Development Journey Devlog -->
       <a href="https://www.youtube.com/watch?v=K6sjliyFHF0" target="_blank" rel="noopener" class="devlog-card silk-card reveal" style="transition-delay:220ms">
         <div class="devlog-thumb">
           <img src="https://i.ytimg.com/vi/K6sjliyFHF0/maxresdefault.jpg" alt="Development Journey Devlog"
@@ -1376,7 +1332,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </a>
 
-      <!-- Video 5: Experiments — Unity & AI -->
       <a href="https://www.youtube.com/watch?v=Dk98lgsAO58" target="_blank" rel="noopener" class="devlog-card silk-card reveal" style="transition-delay:280ms">
         <div class="devlog-thumb">
           <img src="https://i.ytimg.com/vi/Dk98lgsAO58/maxresdefault.jpg" alt="Experiments Unity and AI"
@@ -1392,7 +1347,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </a>
 
-      <!-- Video 6: Gameplay Short Clip -->
       <a href="https://www.youtube.com/watch?v=xud-BFjGSQ8" target="_blank" rel="noopener" class="devlog-card silk-card reveal" style="transition-delay:340ms">
         <div class="devlog-thumb">
           <img src="https://i.ytimg.com/vi/xud-BFjGSQ8/maxresdefault.jpg" alt="DeepVRse Short Gameplay Clip"
@@ -1408,7 +1362,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </a>
 
-      <!-- YouTube Channel Card -->
       <a href="https://www.youtube.com/@MirageRealityLabs" target="_blank" rel="noopener" class="yt-channel-card reveal" style="transition-delay:400ms">
         <div class="yt-ch-inner">
           <div class="yt-ch-logo">
@@ -1439,7 +1392,6 @@ a { text-decoration: none; color: inherit; }
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Left -->
       <div class="contact-left">
         <span class="eyebrow reveal">Let's work together</span>
         <h2 class="contact-headline reveal" style="transition-delay:60ms">
@@ -1475,7 +1427,6 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
 
-      <!-- Right -->
       <div class="contact-right reveal" style="transition-delay:80ms">
         <div class="contact-cards">
 
@@ -1664,32 +1615,47 @@ function renderScene(scene) {
 function typeSuggestion(scene, text, idx, cb) {
   const area = document.getElementById('ide-code-area');
   if (!area) return;
+
   let typingLine = area.querySelector('.ide-line.typing');
+
   if (!typingLine) {
     typingLine = document.createElement('div');
     typingLine.className = 'ide-line typing';
-    const ln = document.createElement('span'); ln.className = 'ln'; ln.textContent = String(scene.lines.length + 1);
+
+    const ln = document.createElement('span');
+    ln.className = 'ln';
+    ln.textContent = String(scene.lines.length + 1);
+
     typingLine.appendChild(ln);
+
+    const status = document.createElement('span');
+    status.className = 'cm';
+    status.textContent = '  // AI generating...';
+
+    typingLine.appendChild(status);
+
     area.appendChild(typingLine);
   }
-  const oldCursor = typingLine.querySelector('.type-cursor');
-  if (oldCursor) oldCursor.remove();
-  const ghost = document.createElement('span');
-  ghost.className = 'ide-ai-ghost';
-  ghost.textContent = text.slice(0, idx);
-  typingLine.appendChild(ghost);
-  const cursor = document.createElement('span');
-  cursor.className = 'type-cursor';
-  typingLine.appendChild(cursor);
-  if (idx < text.length) {
-    setTimeout(() => typeSuggestion(scene, text, idx + 1, cb), 38 + Math.random() * 20);
-  } else {
+
+  setTimeout(() => {
     const slot = document.getElementById('ide-accept-slot');
+
     if (slot) {
-      slot.innerHTML = `<div class="ide-accept-bar"><span class="ide-accept-text">AI SUGGESTION READY</span><div class="ide-accept-keys"><span class="ide-key">Tab</span><span class="ide-key">Accept</span></div></div>`;
+      slot.innerHTML = `
+        <div class="ide-accept-bar">
+          <span class="ide-accept-text">
+            AI SUGGESTION READY
+          </span>
+          <div class="ide-accept-keys">
+            <span class="ide-key">Tab</span>
+            <span class="ide-key">Accept</span>
+          </div>
+        </div>
+      `;
     }
-    setTimeout(cb, 1400);
-  }
+
+    cb();
+  }, 1800);
 }
 
 function acceptSuggestion(scene) {
